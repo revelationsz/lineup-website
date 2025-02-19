@@ -3,23 +3,24 @@ import Image from "next/image"
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-6">Welcome to LineUp</h1>
-      <p className="text-xl mb-8 text-center max-w-2xl">
-        Organize your life, streamline your tasks, and boost your productivity with LineUp - the ultimate app for
-        staying on top of your game.
+      <h1 className="text-4xl font-bold mb-6 text-purple-400">Welcome to BarHopper</h1>
+      <p className="text-xl mb-16 text-center max-w-2xl text-gray-300">
+        Stay up to date on lines, cover, and music for bars so you never have a dull night out!!
       </p>
-      <Image
-        src="/placeholder.svg?height=300&width=300"
-        alt="LineUp App Screenshot"
-        width={300}
-        height={300}
-        className="rounded-lg shadow-lg mb-8"
-      />
+      {/* <a
+        href='https://postimg.cc/9Rv9NShr' 
+        target='_blank'> */}
+        <img  
+          className='mb-40' 
+          src='https://i.postimg.cc/9Rv9NShr/Screenshot-2025-02-19-172650-copy.png' 
+          border='0' 
+          alt='Screenshot-2025-02-19-172650-copy'/>
+        {/* </a> */}
       <a
-        href="#download"
-        className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
+        // href="#download"
+        className="bg-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors"
       >
-        Download Now
+        Download Comming Soon...
       </a>
     </div>
   )
