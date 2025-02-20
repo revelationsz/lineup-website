@@ -65,7 +65,7 @@ export default function Privacy() {
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">9. Children's Privacy</h2>
-      <p>The app is not intended for children under 18. We do not knowingly collect data from minors.</p>
+      <p>The app is not intended for children under 18. We don&apos;t knowingly collect data from minors.</p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">10. Changes to Privacy Policy</h2>
       <p>

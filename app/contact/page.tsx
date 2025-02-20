@@ -3,8 +3,8 @@ export default function Contact() {
     <div className="max-w-2xl mx-auto bg-gray-900 p-8 rounded-lg shadow-lg">
       <h1 className="text-3xl font-bold mb-6 text-purple-400">Contact Us</h1>
       <p className="mb-6 text-gray-300">
-        Have questions or feedback? We'd love to hear from you. Fill out the form below and we'll get back to you as
-        soon as possible.
+        Have questions or feedback? We&apos;d love to hear from you. Fill out the form below and we&apos;ll get back to
+        you as soon as possible.
       </p>
       <form className="space-y-4">
         <div>

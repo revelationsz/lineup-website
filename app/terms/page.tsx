@@ -5,8 +5,8 @@ export default function Terms() {
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">1. Acceptance of Terms</h2>
       <p>
-        Welcome to LineUp! By using our app, you agree to these Terms of Service ("Terms"). If you do not agree, you may
-        not use the app.
+        Welcome to LineUp! By using our app, you agree to these Terms of Service (&quot;Terms&quot;). If you do not
+        agree, you may not use the app.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">2. Description of Service</h2>
@@ -44,8 +44,8 @@ export default function Terms() {
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">7. Disclaimer of Warranties</h2>
       <p>
-        The app is provided "AS IS" without warranties of any kind. We do not guarantee the accuracy or availability of
-        information provided.
+        The app is provided &quot;AS IS&quot; without warranties of any kind. We do not guarantee the accuracy or
+        availability of information provided.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">8. Limitation of Liability</h2>
