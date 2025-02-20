@@ -32,7 +32,7 @@ export default function Terms() {
       <ul className="list-disc pl-6 mb-4">
         <li>Use the app for any unlawful or unauthorized purpose.</li>
         <li>Submit false or misleading information.</li>
-        <li>Interfere with or disrupt the app's functionality.</li>
+        <li>Interfere with or disrupt the app&apos;s functionality.</li>
         <li>Attempt to reverse engineer or hack the app.</li>
       </ul>
 

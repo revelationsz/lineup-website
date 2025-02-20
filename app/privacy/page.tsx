@@ -40,7 +40,7 @@ export default function Privacy() {
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">5. Data Retention</h2>
       <p>
-        We retain your data only as long as necessary to provide the app's services or comply with legal obligations.
+        We retain your data only as long as necessary to provide the app&apos;s services or comply with legal obligations.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">6. Data Security</h2>
@@ -64,7 +64,7 @@ export default function Privacy() {
         their privacy practices.
       </p>
 
-      <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">9. Children's Privacy</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">9. Children&apos;s Privacy</h2>
       <p>The app is not intended for children under 18. We don&apos;t knowingly collect data from minors.</p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">10. Changes to Privacy Policy</h2>
