@@ -12,7 +12,6 @@ export default function Home() {
         <img  
           className='mb-40' 
           src='https://i.postimg.cc/9Rv9NShr/Screenshot-2025-02-19-172650-copy.png' 
-          border='0' 
           alt='Screenshot-2025-02-19-172650-copy'/>
         {/* </a> */}
       <a
