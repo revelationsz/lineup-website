@@ -14,7 +14,8 @@ export default function ResetPassword() {
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
-  const [token, setToken] = useState<string | null>(null)
+  const [accessToken, setAccessToken] = useState<string | null>(null)
+  const [refreshToken, setRefreshToken] = useState<string | null>(null)
   const [type, setType] = useState<string | null>(null)
 
   // Get the token from the URL query parameters
@@ -22,14 +23,17 @@ export default function ResetPassword() {
     const hash = window.location.hash; // e.g., "#access_token=eyJhbGciOiJIUzI1N..."
     const hashParams = new URLSearchParams(hash.substring(1)); // Remove the '#' before parsing
     if(hashParams.get("access_token") != null){
-      setToken(hashParams.get("access_token")) 
+      setAccessToken(hashParams.get("access_token")) 
     } 
     if(hashParams.get("type") != null){
        setType(hashParams.get("type"));
     }
-    console.log(type, token);
+    if(hashParams.get("refresh_token") != null){
+      setRefreshToken(hashParams.get("refresh_token"))
+    }
+    console.log(type, accessToken);
+  
   },[])
-
 
 
   const validatePassword = () => {
@@ -48,8 +52,13 @@ export default function ResetPassword() {
     e.preventDefault()
     setError(null)
 
-    if (!token) {
-      setError("Invalid or missing reset token")
+    if (!accessToken) {
+      setError("Invalid or missing access token")
+      return
+    }
+
+    if (!refreshToken) {
+      setError("Invalid or missing refresh token")
       return
     }
 
@@ -67,9 +76,9 @@ export default function ResetPassword() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          token,
+          accessToken,
           password,
-          type
+          refreshToken
         }),
       })
 
@@ -114,7 +123,7 @@ export default function ResetPassword() {
             </svg>
           </div>
           <p className="text-lg mb-4 text-gray-300">Your password has been successfully reset!</p>
-          <p className="text-gray-400">Redirecting you to the login page...</p>
+          <p className="text-gray-400">Please go back to the app and try logging in again</p>
         </div>
       ) : (
         <>
@@ -129,11 +138,11 @@ export default function ResetPassword() {
             </div>
           )}
 
-          {!token && (
+          {!accessToken && (
             <div className="bg-yellow-500 bg-opacity-20 border border-yellow-500 text-yellow-300 px-4 py-3 rounded mb-4">
               No reset token found. Please make sure you clicked the link from your email.
             </div>
-          )}
+          )}            
 
           <form onSubmit={handleResetPassword} className="space-y-4">
             <div>
@@ -167,7 +176,7 @@ export default function ResetPassword() {
             <button
               type="submit"
               className="w-full bg-purple-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-purple-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={loading || !token}
+              disabled={loading || !accessToken}
             >
               {loading ? "Resetting Password..." : "Reset Password"}
             </button>
@@ -183,4 +192,3 @@ export default function ResetPassword() {
     </div>
   )
 }
-

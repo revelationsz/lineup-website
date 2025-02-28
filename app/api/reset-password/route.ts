@@ -1,24 +1,21 @@
 import { supabase } from "@/lib/supabase-client"
 import { NextResponse } from "next/server"
 
-// Initialize Supabase client
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ""
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ""
 
 export async function POST(request: Request) {
   try {
-    const { token, password, type } = await request.json()
+    const { accessToken, password, refreshToken } = await request.json()
 
-    if (!token || !password) {
+    if (!accessToken || !password) {
       return NextResponse.json({ message: "Missing required fields" }, { status: 400 })
     }
 
     // Create Supabase client with service role key for admin operations
+     const {data: data, error: err} = await supabase.auth.setSession({ 
+            access_token: accessToken, 
+            refresh_token: refreshToken
+          })
 
-    const {data: data, error: err} = await supabase.auth.verifyOtp(
-                                                    { token_hash: token, 
-                                                      type: type
-                                                    })
     console.log('tt', data, err)                                              
     // Update the user's password using the token
     const { error } = await supabase.auth.updateUser(
