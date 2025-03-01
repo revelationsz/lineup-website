@@ -62,7 +62,7 @@ export default function ResetPassword() {
 
     try {
       // This is where you would integrate with Supabase
-      const response = await fetch("/lineup-website/api/reset-password", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/reset-password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
