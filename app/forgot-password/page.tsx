@@ -18,7 +18,7 @@ export default function ForgotPassword() {
 
     try {
       // This is where you would integrate with Supabase
-      const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/forgot-password`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}api/forgot-password`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
