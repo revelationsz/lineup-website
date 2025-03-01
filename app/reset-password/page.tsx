@@ -13,7 +13,6 @@ export default function ResetPassword() {
   const [success, setSuccess] = useState(false)
   const [accessToken, setAccessToken] = useState<string | null>(null)
   const [refreshToken, setRefreshToken] = useState<string | null>(null)
-  const [type, setType] = useState<string | null>(null)
 
   // Get the token from the URL query parameters
   useEffect(() => {
@@ -21,9 +20,6 @@ export default function ResetPassword() {
     const hashParams = new URLSearchParams(hash.substring(1)); // Remove the '#' before parsing
     if(hashParams.get("access_token") != null){
       setAccessToken(hashParams.get("access_token")) 
-    } 
-    if(hashParams.get("type") != null){
-       setType(hashParams.get("type"));
     }
     if(hashParams.get("refresh_token") != null){
       setRefreshToken(hashParams.get("refresh_token"))
