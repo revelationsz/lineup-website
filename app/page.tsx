@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-6 text-purple-400">Welcome to BarHopper</h1>
+      <h1 className="text-4xl font-bold mb-6 text-purple-400 text-center">Welcome to BarHopper</h1>
       <p className="text-xl mb-16 text-center max-w-2xl text-gray-300">
         Stay up to date on lines, cover, and music for bars so you never have a dull night out
       </p>
