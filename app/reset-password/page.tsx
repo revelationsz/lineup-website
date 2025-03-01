@@ -3,12 +3,9 @@
 import type React from "react"
 
 import { useEffect, useState } from "react"
-import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 
 export default function ResetPassword() {
-  const router = useRouter()
-  const searchParams = useSearchParams()
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [error, setError] = useState<string | null>(null)
@@ -31,7 +28,6 @@ export default function ResetPassword() {
     if(hashParams.get("refresh_token") != null){
       setRefreshToken(hashParams.get("refresh_token"))
     }
-    console.log(type, accessToken);
   
   },[])
 
