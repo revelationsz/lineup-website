@@ -24,7 +24,7 @@ export default function EmailConfirmed() {
       <h1 className="text-4xl font-bold mb-4 text-purple-400">Email Confirmed!</h1>
 
       <p className="text-xl mb-6 text-gray-300">
-        Thank you for signing up for BarHopper! Your email has been successfully verified. Please try logging back into the app again!
+        Thank you for signing up for Lineup! Your email has been successfully verified. Please try logging back into the app again!
       </p>
 
       <div className="bg-gray-900 p-6 rounded-lg shadow-lg mb-8 w-full">

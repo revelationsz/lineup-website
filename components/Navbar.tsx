@@ -10,7 +10,7 @@ export default function Navbar() {
     <header className="bg-neutral-900 text-white p-4 sticky top-0 z-10 shadow-md">
       <nav className="container mx-auto flex justify-between items-center">
         <Link href="/" className="text-2xl font-bold text-purple-400">
-          BarHopper
+          Lineup
         </Link>
         {/* Hamburger button for small screens */}
         <div className="md:hidden">
