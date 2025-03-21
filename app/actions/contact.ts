@@ -5,12 +5,6 @@ import { Resend } from 'resend';
 // Initialize Resend with your API key
 const resend = new Resend(process.env.RESEND_API_KEY)
 
-// Define the shape of our form data
-type ContactFormData = {
-  name: string
-  email: string
-  message: string
-}
 
 export async function sendContactForm(formData: FormData): Promise<{ success: boolean; message: string }> {
   try {
@@ -35,7 +29,7 @@ export async function sendContactForm(formData: FormData): Promise<{ success: bo
     }
 
     // Send email using Resend
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: "LineUp Contact Form <onboarding@resend.dev>", // Use your verified domain
       to: process.env.CONTACT_EMAIL!, // Your email address
       subject: `New Contact Form Submission from ${name}`,
@@ -56,8 +50,7 @@ export async function sendContactForm(formData: FormData): Promise<{ success: bo
         message: "Failed to send message. Please try again later.",
       }
     }
-
-    return {
+    return {  
       success: true,
       message: "Your message has been sent! We'll get back to you soon.",
     }

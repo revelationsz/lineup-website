@@ -30,6 +30,7 @@ export default function Contact() {
         form?.reset()
       }
     } catch (error) {
+      console.log(error)
       setFormStatus({
         success: false,
         message: "An unexpected error occurred. Please try again later.",
