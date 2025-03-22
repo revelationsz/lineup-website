@@ -11,8 +11,10 @@ export default function Home() {
         target='_blank'> */}
         <img  
           className='mb-40' 
-          src='https://i.postimg.cc/9Rv9NShr/Screenshot-2025-02-19-172650-copy.png' 
-          alt='Screenshot-2025-02-19-172650-copy'/>
+          src='https://i.postimg.cc/YSKwW9Pk/appicon-Bright.png' 
+          alt='Screenshot-2025-02-19-172650-copy'
+          width='300'
+          height='300'/>
         {/* </a> */}
       <a
         // href="#download"
