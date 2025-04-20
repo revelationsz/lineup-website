@@ -32,7 +32,7 @@ export default function EmailConfirmed() {
         <ul className="text-left text-gray-300 space-y-3">
           <li className="flex items-start">
             <span className="text-green-500 mr-2">✓</span>
-            <span>Complete your profile to get personalized bar recommendations</span>
+            <span>Head back to the app and start exploring bars near you!!</span>
           </li>
           <li className="flex items-start">
             <span className="text-green-500 mr-2">✓</span>
@@ -45,21 +45,6 @@ export default function EmailConfirmed() {
         </ul>
       </div>
 
-
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Link
-          href="/dashboard"
-          className="bg-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-700 transition-colors"
-        >
-          Go to Dashboard
-        </Link>
-        <Link
-          href="/profile/edit"
-          className="border border-purple-600 text-purple-400 px-6 py-3 rounded-full text-lg font-semibold hover:bg-purple-900 hover:bg-opacity-30 transition-colors"
-        >
-          Complete Your Profile
-        </Link>
-      </div>
     </div>
   )
 }
