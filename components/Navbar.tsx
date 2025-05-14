@@ -31,26 +31,36 @@ export default function Navbar() {
         </div>
         {/* Full navigation for larger screens */}
         <ul className="hidden md:flex space-x-4">
-          <li>
-            <Link href="/" className="hover:text-purple-400 transition-colors">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/terms" className="hover:text-purple-400 transition-colors">
-              Terms
-            </Link>
-          </li>
-          <li>
-            <Link href="/privacy" className="hover:text-purple-400 transition-colors">
-              Privacy
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="hover:text-purple-400 transition-colors">
-              Contact
-            </Link>
-          </li>
+        <li>
+                <Link href="/" className="hover:text-purple-400 transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-purple-400 transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="hover:text-purple-400 transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-purple-400 transition-colors">
+                  Terms
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:text-purple-400 transition-colors">
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-purple-400 transition-colors">
+                  Contact
+                </Link>
+              </li>
         </ul>
       </nav>
       {/* Dropdown menu for small screens */}

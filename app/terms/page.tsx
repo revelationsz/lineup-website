@@ -17,7 +17,7 @@ export default function Terms() {
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">3. Eligibility</h2>
       <p>
-        You must be at least 18 years old to use this app. By using the app, you represent that you are of legal
+        You must be at least 21 years old to use this app. By using the app, you represent that you are of legal
         drinking age in your country.
       </p>
 
@@ -61,8 +61,7 @@ export default function Terms() {
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">10. Governing Law</h2>
       <p>
-        These Terms are governed by the laws of [Your Country]. Any disputes will be resolved in the courts of [Your
-        Jurisdiction].
+        These Terms are governed by the laws of The United States. Any disputes will be resolved in the courts of Massachusetts, United States.
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">11. Changes to Terms</h2>
@@ -72,7 +71,7 @@ export default function Terms() {
       </p>
 
       <h2 className="text-2xl font-semibold mt-6 mb-4 text-purple-400">12. Contact</h2>
-      <p>If you have questions about these Terms, contact us at [Your Email Address]</p>
+      <p>If you have questions about these Terms, contact us at lineup.barapp@gmail.com</p>
     </div>
   )
 }
