@@ -19,15 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-gradient-to-t from-neutral-900 to-purple-900 text-gray-200 flex flex-col min-h-screen`}
+        className={`${inter.className} animated-gradient text-gray-200 flex flex-col min-h-screen`}
       >
         <Navbar />
         <main className="container mx-auto mt-8 px-4 flex-grow">
           {children}
         </main>
-        <footer className="bg-neutral-900 text-white py-6 mt-12 shadow-md">
+        <footer className="glass-card mt-12 py-8 border-t border-purple-500/20">
           <div className="container mx-auto text-center">
-            <p>&copy; 2024 LineUp App. All rights reserved.</p>
+            <p className="text-gray-300">&copy; 2024 LineUp App. All rights reserved.</p>
           </div>
         </footer>
       </body>

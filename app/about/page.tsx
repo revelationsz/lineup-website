@@ -3,36 +3,41 @@ import Link from "next/link"
 
 export default function About() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4 text-purple-400">About Bar Me</h1>
-        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+    <div className="max-w-6xl mx-auto space-y-16">
+      {/* Header Section */}
+      <div className="text-center space-y-6">
+        <h1 className="text-5xl md:text-6xl font-bold gradient-text">About Lineup</h1>
+        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Your ultimate nightlife companion app designed to make your night out easier, more enjoyable, and completely
-          hassle-free.
+          <span className="gradient-text font-semibold"> hassle-free</span>.
         </p>
       </div>
 
-      <div className="bg-gray-900 rounded-lg p-8 shadow-lg mb-12">
-        <p className="text-gray-300 mb-6">
-          Welcome to Bar Me, your ultimate nightlife companion app designed to make your night out easier, more
-          enjoyable, and completely hassle-free. Whether you&apos;re exploring new spots or visiting your favorite local
-          venues, Bar Me offers real-time crowd-sourced insights to ensure you always have the best night possible.
+      {/* Main Description */}
+      <div className="glass-card p-8 md:p-12 rounded-3xl glow">
+        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+          Welcome to Lineup, your ultimate nightlife companion app designed to make your night out easier, more
+          enjoyable, and completely hassle-free. Whether you're exploring new spots or visiting your favorite local
+          venues, Lineup offers real-time crowd-sourced insights to ensure you always have the best night possible.
         </p>
 
-        <div className="flex justify-center mb-6">
-          <img
-            src="https://i.postimg.cc/05CxBfCX/bar-app-mockup-for-website-copy.png"
-            alt="Bar Me App Interface"
-            width={600}
-            height={300}
-            className="rounded-lg shadow-md"
-          />
+        <div className="flex justify-center">
+          <div className="glass-card p-6 rounded-2xl">
+            <img
+              src="https://i.postimg.cc/05CxBfCX/bar-app-mockup-for-website-copy.png"
+              alt="Lineup App Interface"
+              width={600}
+              height={300}
+              className="rounded-xl shadow-lg"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="mb-12">
-        <h2 className="text-2xl font-bold mb-6 text-purple-400">Key Features</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+      {/* Key Features */}
+      <section className="space-y-8">
+        <h2 className="text-3xl md:text-4xl font-bold gradient-text text-center">Key Features</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
             icon={
               <svg
@@ -165,68 +170,114 @@ export default function About() {
             description="Mark bars as favorites and quickly access them from your profile."
           />
         </div>
-      </div>
+      </section>
 
-      <div className="bg-gray-900 rounded-lg p-8 shadow-lg mb-12">
-        <h2 className="text-2xl font-bold mb-4 text-purple-400">How Reviews Work</h2>
-        <p className="text-gray-300 mb-4">
-          When you leave a review on a bar, your input directly shapes the bar&apos;s overall rating. Here&apos;s how it
+      {/* How Reviews Work */}
+      <div className="glass-card p-8 md:p-12 rounded-3xl">
+        <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">How Reviews Work</h2>
+        <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+          When you leave a review on a bar, your input directly shapes the bar's overall rating. Here's how it
           works:
         </p>
-        <ul className="list-disc pl-6 text-gray-300 space-y-2 mb-4">
-          <li>
-            Your personal review isn&apos;t publicly displayed individually but influences the collective rating shown.
+        <ul className="space-y-4 text-gray-300">
+          <li className="flex items-start gap-3">
+            <div className="glass p-2 rounded-lg mt-1">
+              <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span className="leading-relaxed">
+              Your personal review isn't publicly displayed individually but influences the collective rating shown.
+            </span>
           </li>
-          <li>
-            An intelligent algorithm blends your input with other recent reviews to create a dynamic, accurate picture
-            of the bar&apos;s atmosphere.
+          <li className="flex items-start gap-3">
+            <div className="glass p-2 rounded-lg mt-1">
+              <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span className="leading-relaxed">
+              An intelligent algorithm blends your input with other recent reviews to create a dynamic, accurate picture
+              of the bar's atmosphere.
+            </span>
           </li>
-          <li>
-            If a bar hasn&apos;t received any reviews within the past 24 hours, your review sets the current public
-            rating until new ones are added.
+          <li className="flex items-start gap-3">
+            <div className="glass p-2 rounded-lg mt-1">
+              <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span className="leading-relaxed">
+              If a bar hasn't received any reviews within the past 24 hours, your review sets the current public
+              rating until new ones are added.
+            </span>
           </li>
         </ul>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-purple-400">Privacy and Security</h2>
-          <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>
-              <span className="font-semibold">Secure Authentication:</span> Safely sign in using Google authentication
-              for a streamlined, secure login.
+      {/* Privacy and Support Grid */}
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="glass-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
+          <h2 className="text-2xl font-bold gradient-text mb-6">Privacy and Security</h2>
+          <ul className="space-y-4 text-gray-300">
+            <li className="flex items-start gap-3">
+              <div className="glass p-2 rounded-lg mt-1">
+                <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
+              </div>
+              <div>
+                <span className="font-semibold text-white">Secure Authentication:</span>
+                <span className="block text-gray-300 mt-1">Safely sign in using Google authentication for a streamlined, secure login.</span>
+              </div>
             </li>
-            <li>
-              <span className="font-semibold">Data Protection:</span> Your personal information and review data are
-              securely stored and managed with industry-standard encryption.
+            <li className="flex items-start gap-3">
+              <div className="glass p-2 rounded-lg mt-1">
+                <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <span className="font-semibold text-white">Data Protection:</span>
+                <span className="block text-gray-300 mt-1">Your personal information and review data are securely stored and managed with industry-standard encryption.</span>
+              </div>
             </li>
           </ul>
         </div>
 
-        <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4 text-purple-400">Support and Contact</h2>
-          <p className="text-gray-300 mb-4">
-            Encounter an issue or have feedback? Reach out to us directly from the app or email us at{" "}
-            <a href="mailto:support@barmeapp.com" className="text-purple-400 hover:underline">
-              support@barmeapp.com
-            </a>
-            .
+        <div className="glass-card p-8 rounded-2xl hover:scale-105 transition-all duration-300">
+          <h2 className="text-2xl font-bold gradient-text mb-6">Support and Contact</h2>
+          <p className="text-gray-300 mb-6 leading-relaxed">
+            Encounter an issue or have feedback? Reach out to us directly from the app or through our contact form.
           </p>
+          <Link
+            href="/contact"
+            className="glass-button px-6 py-3 rounded-xl text-white font-medium inline-flex items-center gap-2 hover:scale-105 transition-all duration-300"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            Contact Us
+          </Link>
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-purple-900 to-purple-700 rounded-lg p-8 shadow-lg text-center">
-        <h2 className="text-2xl font-bold mb-4 text-white">Get Started Today!</h2>
-        <p className="text-white mb-6">
-          Download Bar Me, sign in, and transform how you experience nightlife. We&apos;re excited to have you join our
+      {/* Final CTA */}
+      <div className="glass-card p-12 rounded-3xl text-center glow">
+        <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Get Started Today!</h2>
+        <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+          Download Lineup, sign in, and transform how you experience nightlife. We're excited to have you join our
           growing community!
         </p>
         <Link
-          href="https://apps.apple.com/app/i6743187492?"
-          className="inline-block bg-white text-purple-700 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
+          href="https://apps.apple.com/app/id6743187492?"
+          className="glass-button px-8 py-4 rounded-2xl text-lg font-semibold text-white inline-flex items-center gap-3 group"
           target="_blank"
           rel="noopener noreferrer"
         >
+          <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
           Download Now
         </Link>
       </div>
@@ -236,12 +287,14 @@ export default function About() {
 
 function FeatureCard({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="bg-gray-900 rounded-lg p-6 shadow-lg">
-      <div className="flex items-start">
-        <div className="mr-4 mt-1">{icon}</div>
+    <div className="glass-card p-8 rounded-2xl hover:scale-105 transition-all duration-300 group">
+      <div className="flex items-start gap-4">
+        <div className="glass p-3 rounded-xl group-hover:glow transition-all duration-300">
+          {icon}
+        </div>
         <div>
-          <h3 className="text-lg font-semibold mb-2 text-purple-300">{title}</h3>
-          <p className="text-gray-300">{description}</p>
+          <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
+          <p className="text-gray-300 leading-relaxed">{description}</p>
         </div>
       </div>
     </div>

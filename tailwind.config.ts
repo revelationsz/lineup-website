@@ -10,6 +10,13 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        brand: {
+          purple: "#6B5BFF",
+          green: "#3DFF8C",
+        },
+      },
+      maxWidth: {
+        'content': '1200px',
       },
     },
   },
