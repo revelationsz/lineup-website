@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 interface HeroSectionProps {
   headline?: string;
@@ -43,7 +42,7 @@ export default function HeroSection({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Bar Me turns real-time demand into revenue for your venue—putting your bar in front of thousands of nearby 21- to 35-year-olds exactly when they're deciding where to go.
+              Bar Me turns real-time demand into revenue for your venue—putting your bar in front of thousands of nearby 21- to 35-year-olds exactly when they&apos;re deciding where to go.
             </motion.p>
             
             <motion.div

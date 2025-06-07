@@ -42,7 +42,7 @@ export default function FAQ() {
             When you leave a review, it contributes to the overall bar rating using our custom algorithm.
           </p>
           <p className="leading-relaxed">
-            You won't see your review posted directly, but it still influences the public data.
+            You won&apos;t see your review posted directly, but it still influences the public data.
           </p>
           <p className="leading-relaxed">
             If no one has reviewed that bar in the past 24 hours, your review becomes the main one shown until another
@@ -116,7 +116,7 @@ export default function FAQ() {
       question: "How do I reset my password?",
       answer: (
         <p className="leading-relaxed">
-          On the sign-in screen, tap "Forgot Password". You'll receive an email with a link to reset your password.
+          On the sign-in screen, tap &ldquo;Forgot Password&rdquo;. You&apos;ll receive an email with a link to reset your password.
         </p>
       ),
     },
@@ -182,7 +182,7 @@ export default function FAQ() {
       <div className="glass-card p-8 md:p-12 rounded-3xl text-center glow">
         <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-4">Still have questions?</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-          Can't find what you're looking for? Our support team is here to help.
+          Can&apos;t find what you&apos;re looking for? Our support team is here to help.
         </p>
         <a
           href="/contact"

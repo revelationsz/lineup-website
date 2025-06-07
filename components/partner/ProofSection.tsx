@@ -18,19 +18,19 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
 
   const testimonials = [
     {
-      quote: "Bar Me brought us 40+ new customers on our slowest Tuesday. The point redemption system is genius.",
+      quote: "&ldquo;Bar Me brought us 40+ new customers on our slowest Tuesday. The point redemption system is genius.&rdquo;",
       author: "Sarah Chen",
       venue: "The Sinclair",
       role: "General Manager"
     },
     {
-      quote: "We filled our 9 PM dead zone with targeted specials. Revenue up 23% on weeknights.",
+      quote: "&ldquo;We filled our 9 PM dead zone with targeted specials. Revenue up 23% on weeknights.&rdquo;",
       author: "Mike Rodriguez", 
       venue: "Paradise Rock Club",
       role: "Operations Director"
     },
     {
-      quote: "The VIP boost feature put us at the top of every user's feed. Best marketing ROI we've seen.",
+      quote: "&ldquo;The VIP boost feature put us at the top of every user&apos;s feed. Best marketing ROI we&apos;ve seen.&rdquo;",
       author: "Jessica Park",
       venue: "Royale Boston", 
       role: "Marketing Manager"
@@ -49,7 +49,7 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
           className="text-center mb-16"
         >
           <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-8">
-            Trusted by Boston's Top Venues
+            Trusted by Boston&apos;s Top Venues
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
@@ -99,9 +99,10 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
                 </div>
               </div>
               
-              <blockquote className="text-gray-700 mb-4 italic">
-                "{testimonial.quote}"
-              </blockquote>
+              <blockquote 
+                className="text-gray-700 mb-4 italic"
+                dangerouslySetInnerHTML={{ __html: testimonial.quote }}
+              />
               
               <div className="border-t pt-4">
                 <div className="font-semibold text-gray-900">{testimonial.author}</div>

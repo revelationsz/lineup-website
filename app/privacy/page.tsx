@@ -130,7 +130,7 @@ export default function Privacy() {
         <div className="glass-card p-8 rounded-2xl">
           <h2 className="text-2xl font-bold gradient-text mb-4">9. Children's Privacy</h2>
           <p className="text-gray-300 leading-relaxed">
-            The app is not intended for children under 18. We don't knowingly collect data from minors.
+            The app is not intended for children under 18. We don&apos;t knowingly collect data from minors.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ export default function Privacy() {
       <div className="glass-card p-8 md:p-12 rounded-3xl text-center glow">
         <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-4">Privacy Questions?</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-          Have concerns about your privacy or data? We're committed to transparency and are here to help.
+          Have concerns about your privacy or data? We&apos;re committed to transparency and are here to help.
         </p>
         <a
           href="/contact"

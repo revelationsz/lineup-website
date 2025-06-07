@@ -17,8 +17,9 @@ export default function About() {
       <div className="glass-card p-8 md:p-12 rounded-3xl glow">
         <p className="text-lg text-gray-300 mb-8 leading-relaxed">
           Welcome to Lineup, your ultimate nightlife companion app designed to make your night out easier, more
-          enjoyable, and completely hassle-free. Whether you're exploring new spots or visiting your favorite local
-          venues, Lineup offers real-time crowd-sourced insights to ensure you always have the best night possible.
+          enjoyable, and completely hassle-free. Whether you&apos;re exploring new spots or visiting your favorite local
+          venues, Lineup offers real-time crowd-sourced insights and social connections to ensure you always have the best night possible.
+          Connect with friends, see their latest reviews, and compete on leaderboards while discovering the perfect spots for your night out.
         </p>
 
         <div className="flex justify-center">
@@ -115,34 +116,6 @@ export default function About() {
                 strokeLinejoin="round"
                 className="text-purple-400"
               >
-                <line x1="4" y1="21" x2="4" y2="14"></line>
-                <line x1="4" y1="10" x2="4" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="12"></line>
-                <line x1="12" y1="8" x2="12" y2="3"></line>
-                <line x1="20" y1="21" x2="20" y2="16"></line>
-                <line x1="20" y1="12" x2="20" y2="3"></line>
-                <line x1="1" y1="14" x2="7" y2="14"></line>
-                <line x1="9" y1="8" x2="15" y2="8"></line>
-                <line x1="17" y1="16" x2="23" y2="16"></line>
-              </svg>
-            }
-            title="Smart Sorting and Filtering"
-            description="Easily filter bars by distance, wait times, music type, and more."
-          />
-          <FeatureCard
-            icon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-purple-400"
-              >
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
             }
@@ -169,6 +142,113 @@ export default function About() {
             title="Favorites and Recommendations"
             description="Mark bars as favorites and quickly access them from your profile."
           />
+          <FeatureCard
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-purple-400"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            }
+            title="Friends & Leaderboards"
+            description="Add friends, view their latest reviews, and compete on point-based rankings while discovering nightlife together."
+          />
+        </div>
+      </section>
+
+      {/* Social Nightlife Experience */}
+      <section className="space-y-8">
+        <h2 className="text-3xl md:text-4xl font-bold gradient-text text-center">Social Nightlife Experience</h2>
+        <div className="glass-card p-8 md:p-12 rounded-3xl">
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            Nightlife is better with friends. Lineup&apos;s social features let you connect with your crew and discover new spots together through trusted recommendations and friendly competition.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold gradient-text">Connect & Discover</h3>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <div className="glass p-2 rounded-lg mt-1">
+                    <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="leading-relaxed">
+                    Add friends and see their latest bar reviews and recommendations in real-time.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="glass p-2 rounded-lg mt-1">
+                    <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="leading-relaxed">
+                    Make group decisions based on trusted friend recommendations and shared experiences.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="glass p-2 rounded-lg mt-1">
+                    <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="leading-relaxed">
+                    Build your nightlife network with like-minded people who share your venue preferences.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="space-y-6">
+              <h3 className="text-xl font-bold gradient-text">Compete & Earn Points</h3>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <div className="glass p-2 rounded-lg mt-1">
+                    <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="leading-relaxed">
+                    Climb the leaderboards by contributing helpful and accurate venue reviews.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="glass p-2 rounded-lg mt-1">
+                    <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="leading-relaxed">
+                    Earn points for active participation and see how you rank among your friends.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <div className="glass p-2 rounded-lg mt-1">
+                    <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="leading-relaxed">
+                    Discover who the top nightlife experts are in your friend group and city.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -176,7 +256,7 @@ export default function About() {
       <div className="glass-card p-8 md:p-12 rounded-3xl">
         <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">How Reviews Work</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-          When you leave a review on a bar, your input directly shapes the bar's overall rating. Here's how it
+          When you leave a review on a bar, your input directly shapes the bar&apos;s overall rating. Here&apos;s how it
           works:
         </p>
         <ul className="space-y-4 text-gray-300">
@@ -187,7 +267,7 @@ export default function About() {
               </svg>
             </div>
             <span className="leading-relaxed">
-              Your personal review isn't publicly displayed individually but influences the collective rating shown.
+              Your personal review isn&apos;t publicly displayed individually but influences the collective rating shown.
             </span>
           </li>
           <li className="flex items-start gap-3">
@@ -198,7 +278,7 @@ export default function About() {
             </div>
             <span className="leading-relaxed">
               An intelligent algorithm blends your input with other recent reviews to create a dynamic, accurate picture
-              of the bar's atmosphere.
+              of the bar&apos;s atmosphere.
             </span>
           </li>
           <li className="flex items-start gap-3">
@@ -208,8 +288,18 @@ export default function About() {
               </svg>
             </div>
             <span className="leading-relaxed">
-              If a bar hasn't received any reviews within the past 24 hours, your review sets the current public
+              If a bar hasn&apos;t received any reviews within the past 24 hours, your review sets the current public
               rating until new ones are added.
+            </span>
+          </li>
+          <li className="flex items-start gap-3">
+            <div className="glass p-2 rounded-lg mt-1">
+              <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span className="leading-relaxed">
+              Your friends can see your latest reviews and recommendations, helping your social circle discover great spots together.
             </span>
           </li>
         </ul>
@@ -266,7 +356,7 @@ export default function About() {
       <div className="glass-card p-12 rounded-3xl text-center glow">
         <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-6">Get Started Today!</h2>
         <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-          Download Lineup, sign in, and transform how you experience nightlife. We're excited to have you join our
+          Download Lineup, sign in, and transform how you experience nightlife. We&apos;re excited to have you join our
           growing community!
         </p>
         <Link

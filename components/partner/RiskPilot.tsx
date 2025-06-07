@@ -79,7 +79,7 @@ export default function RiskPilot({ className = '' }: RiskPilotProps) {
             </h2>
             
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              We're so confident Bar Me will drive revenue to your venue that we're offering a completely risk-free 30-day pilot program.
+              We&apos;re so confident Bar Me will drive revenue to your venue that we&apos;re offering a completely risk-free 30-day pilot program.
             </p>
 
             <div className="bg-brand-green/10 border border-brand-green/30 rounded-2xl p-6 mb-8">
@@ -87,8 +87,8 @@ export default function RiskPilot({ className = '' }: RiskPilotProps) {
                 Our Guarantee to You
               </h3>
               <p className="text-lg text-gray-300 leading-relaxed">
-                If you don't see at least <strong className="text-white">100 verified check-ins</strong> in your first 30 days, 
-                you pay nothing. We'll even help you optimize your offerings to maximize results.
+                If you don&apos;t see at least <strong className="text-white">100 verified check-ins</strong> in your first 30 days, 
+                you pay nothing. We&apos;ll even help you optimize your offerings to maximize results.
               </p>
             </div>
 

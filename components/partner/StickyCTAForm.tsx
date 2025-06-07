@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 interface StickyCTAFormProps {
   isVisible: boolean;
@@ -16,7 +16,7 @@ interface FormData {
   bestNight: string;
 }
 
-export default function StickyCTAForm({ isVisible, onSubmit }: StickyCTAFormProps) {
+export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');

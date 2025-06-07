@@ -127,7 +127,7 @@ export default function Terms() {
       <div className="glass-card p-8 md:p-12 rounded-3xl text-center glow">
         <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-4">Questions about our Terms?</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-          Need clarification on any of these terms? We're here to help.
+          Need clarification on any of these terms? We&apos;re here to help.
         </p>
         <a
           href="/contact"

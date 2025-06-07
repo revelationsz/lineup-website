@@ -10,7 +10,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
   const immediateBenefits = [
     {
       title: "Points = Proven Foot Traffic",
-      description: "Bar Me users can redeem their in-app points at your bar for a free first drink or an instant cover-skip pass—so you only reward guests once they're inside and ready to spend more.",
+      description: "Bar Me users can redeem their in-app points at your bar for a free first drink or an instant cover-skip pass—so you only reward guests once they&apos;re inside and ready to spend more.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -19,7 +19,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
     },
     {
       title: "Smooth Demand on Your Terms",
-      description: "Push \"Tonight's Specials\" or \"No cover before 9 PM\" to nearby users to fill slow hours and manage peak flow.",
+      description: "Push &ldquo;Tonight&apos;s Specials&rdquo; or &ldquo;No cover before 9 PM&rdquo; to nearby users to fill slow hours and manage peak flow.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -28,7 +28,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
     },
     {
       title: "VIP Boost in the App",
-      description: "Bars that accept point redemptions get priority placement and a \"Rewards Here\" badge—making you the obvious next stop in every user's feed.",
+      description: "Bars that accept point redemptions get priority placement and a &ldquo;Rewards Here&rdquo; badge—making you the obvious next stop in every user&apos;s feed.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
           <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
@@ -40,7 +40,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
   const futurePromises = [
     {
       title: "Low-Cost, High-Intent Marketing",
-      description: "Target users within walking distance when they're actively looking for their next spot."
+      description: "Target users within walking distance when they&apos;re actively looking for their next spot."
     },
     {
       title: "Data You Can Use Tomorrow", 
@@ -67,7 +67,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
             Turn Real-Time Demand Into Revenue
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Bar Me turns real-time demand into revenue for your venue—putting your bar in front of thousands of nearby 21- to 35-year-olds exactly when they're deciding where to go and letting you fill seats, shorten lines, and promote specials with zero upfront cost.
+            Bar Me turns real-time demand into revenue for your venue—putting your bar in front of thousands of nearby 21- to 35-year-olds exactly when they&apos;re deciding where to go and letting you fill seats, shorten lines, and promote specials with zero upfront cost.
           </p>
         </motion.div>
 
