@@ -82,7 +82,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
       } else {
         setSubmitMessage(result.error || 'Something went wrong. Please try again.');
       }
-    } catch (error) {
+    } catch {
       setSubmitMessage('Network error. Please try again.');
     } finally {
       setIsSubmitting(false);
@@ -303,7 +303,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                   </button>
 
                   <p className="text-xs text-gray-500 text-center">
-                    We'll contact you within 24 hours to discuss next steps
+                    We&apos;ll contact you within 24 hours to discuss next steps
                   </p>
                 </form>
               </motion.div>

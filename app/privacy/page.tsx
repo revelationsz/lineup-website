@@ -87,7 +87,7 @@ export default function Privacy() {
         <div className="glass-card p-8 rounded-2xl">
           <h2 className="text-2xl font-bold gradient-text mb-4">5. Data Retention</h2>
           <p className="text-gray-300 leading-relaxed">
-            We retain your data only as long as necessary to provide the app's services or comply with legal obligations.
+            We retain your data only as long as necessary to provide the app&apos;s services or comply with legal obligations.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ export default function Privacy() {
         </div>
 
         <div className="glass-card p-8 rounded-2xl">
-          <h2 className="text-2xl font-bold gradient-text mb-4">9. Children's Privacy</h2>
+          <h2 className="text-2xl font-bold gradient-text mb-4">9. Children&apos;s Privacy</h2>
           <p className="text-gray-300 leading-relaxed">
             The app is not intended for children under 18. We don&apos;t knowingly collect data from minors.
           </p>

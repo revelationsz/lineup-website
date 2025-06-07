@@ -45,7 +45,7 @@ export default function Contact() {
       <div className="text-center space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold gradient-text">Contact Us</h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          Have questions or feedback? We'd love to hear from you. Fill out the form below and we'll get back to
+          Have questions or feedback? We&apos;d love to hear from you. Fill out the form below and we&apos;ll get back to
           you as soon as possible.
         </p>
       </div>

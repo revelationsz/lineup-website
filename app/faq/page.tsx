@@ -29,7 +29,7 @@ export default function FAQ() {
       question: "How does the app know what's happening at each bar?",
       answer: (
         <p className="leading-relaxed">
-          Our community of users updates each bar's info live by submitting quick reviews. You help others by
+          Our community of users updates each bar&apos;s info live by submitting quick reviews. You help others by
           sharing your experience—and they help you too.
         </p>
       ),
@@ -55,7 +55,7 @@ export default function FAQ() {
       question: "What kind of info can I review?",
       answer: (
         <p className="leading-relaxed">
-          You can update the bar's line length, music genre, crowd level, and cover charge using easy sliders and
+          You can update the bar&apos;s line length, music genre, crowd level, and cover charge using easy sliders and
           dropdowns.
         </p>
       ),

@@ -14,7 +14,7 @@ export default function Terms() {
         <div className="glass-card p-8 rounded-2xl">
           <h2 className="text-2xl font-bold gradient-text mb-4">1. Acceptance of Terms</h2>
           <p className="text-gray-300 leading-relaxed">
-            Welcome to Lineup! By using our app, you agree to these Terms of Service ("Terms"). If you do not
+            Welcome to Lineup! By using our app, you agree to these Terms of Service (&quot;Terms&quot;). If you do not
             agree, you may not use the app.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function Terms() {
             </li>
             <li className="flex items-start gap-3 text-gray-300">
               <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-              <span>Interfere with or disrupt the app's functionality.</span>
+              <span>Interfere with or disrupt the app&apos;s functionality.</span>
             </li>
             <li className="flex items-start gap-3 text-gray-300">
               <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -77,7 +77,7 @@ export default function Terms() {
         <div className="glass-card p-8 rounded-2xl">
           <h2 className="text-2xl font-bold gradient-text mb-4">7. Disclaimer of Warranties</h2>
           <p className="text-gray-300 leading-relaxed">
-            The app is provided "AS IS" without warranties of any kind. We do not guarantee the accuracy or
+            The app is provided &quot;AS IS&quot; without warranties of any kind. We do not guarantee the accuracy or
             availability of information provided.
           </p>
         </div>
