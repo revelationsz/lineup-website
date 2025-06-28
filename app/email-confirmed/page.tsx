@@ -53,24 +53,6 @@ export default function EmailConfirmed() {
         Thank you for signing up for Lineup! Your email has been successfully verified. Please try logging back into the app again!
       </p>
 
-      <div className="bg-gray-900 p-6 rounded-lg shadow-lg mb-8 w-full">
-        <h2 className="text-2xl font-semibold mb-4 text-purple-400">What&apos;s Next?</h2>
-        <ul className="text-left text-gray-300 space-y-3">
-          <li className="flex items-start">
-            <span className="text-green-500 mr-2">✓</span>
-            <span>Head back to the app and start exploring bars near you!!</span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-green-500 mr-2">✓</span>
-            <span>Explore nearby bars and check their current status</span>
-          </li>
-          <li className="flex items-start">
-            <span className="text-green-500 mr-2">✓</span>
-            <span>Save your favorite venues for quick access</span>
-          </li>
-        </ul>
-      </div>
-
       <div className="flex flex-col items-center gap-4 w-full">
         {isMobile && (
           <button
@@ -115,6 +97,26 @@ export default function EmailConfirmed() {
           </p>
         </div>
       </div>
+
+      <div className="bg-gray-900 p-6 rounded-lg shadow-lg mt-8 w-full">
+        <h2 className="text-2xl font-semibold mb-4 text-purple-400">What&apos;s Next?</h2>
+        <ul className="text-left text-gray-300 space-y-3">
+          <li className="flex items-start">
+            <span className="text-green-500 mr-2">✓</span>
+            <span>Head back to the app and start exploring bars near you!!</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-green-500 mr-2">✓</span>
+            <span>Explore nearby bars and check their current status</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-green-500 mr-2">✓</span>
+            <span>Save your favorite venues for quick access</span>
+          </li>
+        </ul>
+      </div>
+
+  
 
     </div>
   )
