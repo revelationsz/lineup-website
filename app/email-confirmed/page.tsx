@@ -17,7 +17,7 @@ export default function EmailConfirmed() {
 
   const handleDeeplink = () => {
     // Try to open the app
-    window.location.href = 'myapp://signin';
+    window.location.href = 'lineup://signin';
     
     // Fallback: if the app doesn't open within 2 seconds, suggest download
     setTimeout(() => {
