@@ -1,0 +1,140 @@
+{
+    "name": "Confetti.io_style_profile",
+    "brand_personality": {
+      "core_traits": ["fan-first", "exclusive", "experiential", "data-backed", "confident"],
+      "tone": ["action-oriented", "inviting", "proof-driven"],
+      "voice_examples": ["Come on tour with us", "Engage + Reward", "Let’s create memories together"],
+      "headline_pattern": "Bold promise + tangible benefit",
+      "cta_pattern": "Invitation-style CTAs (\"Join\", \"Come\", \"Let’s\")"
+    },
+    "visual_system": {
+      "layout": {
+        "hero": "Tall, oversized headline stacked over concise subhead",
+        "immediate_proof_band": true,
+        "section_flow": ["benefit blocks", "process steps", "advantages", "gallery/social proof", "conversion form"],
+        "alternating_text_image_sections": true
+      },
+      "color": {
+        "base": "#0b0b0c",
+        "foreground": "#ffffff",
+        "accent_primary": "#ff2bd6",
+        "accent_secondary": "#19d4ff",
+        "muted": "#8a8a8f",
+        "usage_rules": [
+          "Dark base with light text",
+          "Single vivid accent for CTAs/highlights",
+          "Photos provide additional color pops"
+        ]
+      },
+      "typography": {
+        "headline_font_style": "heavy, slightly condensed sans-serif",
+        "body_font_style": "clean geometric/grotesque sans-serif (e.g., Inter, Space Grotesk)",
+        "headline_case": "ALL CAPS or Title Case",
+        "headline_leading": "tight",
+        "body_line_height": "generous"
+      },
+      "imagery": {
+        "style": ["real", "candid", "phone-quality", "event-centric"],
+        "characteristics": ["grain/motion blur acceptable", "emotional, in-the-moment shots"],
+        "usage": "Grids/mosaics to emphasize authenticity"
+      },
+      "iconography_motifs": {
+        "elements": ["plus signs", "arrows", "step numbers"],
+        "style": "minimal line icons; photos carry most visual weight"
+      },
+      "motion": {
+        "scroll_effects": ["subtle fade/slide reveals", "light parallax"],
+        "microinteractions": ["stat counters ticking up"]
+      },
+      "background_animation": {
+        "approach": "css_radial_gradients + blur + hue-rotate",
+        "layering": [
+          "multiple radial-gradients positioned around viewport",
+          "blur filter to soften blobs",
+          "hue-rotate animation for continuous color shift"
+        ],
+        "fallback": "linear-gradient with animated background-position",
+        "css_example": ".bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(at 15% 20%,#ff2bd6 0 35%,transparent 70%),radial-gradient(at 85% 80%,#19d4ff 0 35%,transparent 70%),radial-gradient(at 70% 15%,#00ffb2 0 35%,transparent 70%);filter:blur(60px);animation:hue 18s linear infinite;}@keyframes hue{to{filter:hue-rotate(360deg);}}",
+        "alternate_css_example": ".bg{position:fixed;inset:0;z-index:-1;background:linear-gradient(60deg,#ff2bd6,#19d4ff,#00ffb2,#ff2bd6);background-size:400% 400%;animation:move 20s ease infinite;}@keyframes move{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}",
+        "webgl_option": {
+          "use_when": "need organic fluid motion or unique noise patterns",
+          "tech": ["WebGL fragment shader", "Three.js", "regl"],
+          "note": "heavier implementation and performance considerations"
+        }
+      }
+    },
+    "content_structure": [
+      {
+        "section": "hero",
+        "purpose": "state transformational promise",
+        "pattern": "H1 promise + subhead benefit trio + strong CTA"
+      },
+      {
+        "section": "proof_bar",
+        "purpose": "instant credibility",
+        "pattern": "3–5 bold stats with short labels"
+      },
+      {
+        "section": "how_it_works",
+        "purpose": "linear narrative of product flow",
+        "steps": ["capture", "integrate", "reward", "analyze"]
+      },
+      {
+        "section": "advantages",
+        "purpose": "feature-to-benefit mapping",
+        "pattern": "Short H3 + one-line explainer"
+      },
+      {
+        "section": "gallery_social_proof",
+        "purpose": "emotional resonance & authenticity",
+        "pattern": "UGC/photo grid + short captions"
+      },
+      {
+        "section": "conversion_form",
+        "purpose": "friendly invite to engage",
+        "pattern": "Conversational headline + minimal fields"
+      }
+    ],
+    "voice_rules": {
+      "verbs_first": true,
+      "exclusive_framing": true,
+      "user_centric_pov": true,
+      "microcopy_style": "short, declarative H3s + single-sentence explainer"
+    },
+    "starter_kit_tokens": {
+      "fonts": {
+        "headline": "Space Grotesk, sans-serif",
+        "body": "Inter, sans-serif"
+      },
+      "type_scale": {
+        "h1": "clamp(48px, 6vw, 88px)",
+        "h2": "clamp(32px, 4vw, 56px)",
+        "h3": "24px",
+        "body": "18px",
+        "mono": "14px"
+      },
+      "spacing_scale": {
+        "xxl": "8rem",
+        "xl": "5rem",
+        "l": "3rem",
+        "m": "1.5rem",
+        "s": "0.75rem"
+      },
+      "button": {
+        "background": "var(--accent)",
+        "color": "var(--fg)",
+        "padding": "1rem 1.75rem",
+        "border_radius": "9999px",
+        "font_weight": 600,
+        "text_transform": "uppercase"
+      }
+    },
+    "application_steps": [
+      "Map your site to the same narrative flow (promise → proof → process → advantages → emotion → form).",
+      "Swap colors/accents to match your brand while keeping dark-base strategy if desired.",
+      "Keep copy audience-centric (replace “fans” with your audience term).",
+      "Use authentic imagery in place of stock whenever possible.",
+      "Implement subtle motion/scroll reveals—avoid heavy animations."
+    ]
+  }
+  
