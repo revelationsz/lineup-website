@@ -41,9 +41,9 @@ export default function EmailSignup({ className = '' }: EmailSignupProps) {
               </svg>
             </div>
           </div>
-          <h3 className="text-xl font-bold text-white mb-2">You're on the list!</h3>
+          <h3 className="text-xl font-bold text-white mb-2">You&apos;re on the list!</h3>
           <p className="text-gray-300 mb-4">
-            We'll notify you when we have updates about the app launch and exclusive early access opportunities.
+            We&apos;ll notify you when we have updates about the app launch and exclusive early access opportunities.
           </p>
           <button 
             onClick={() => setIsSubmitted(false)}

@@ -22,7 +22,7 @@ export default function Home() {
         
         <p className="text-lg text-gray-400 max-w-2xl mx-auto">
           Join those who are already on the waitlist! Download the app to secure your spot 
-          and be ready when we launch with Boston's hottest venues.
+          and be ready when we launch with Boston&apos;s hottest venues.
         </p>
         
         {/* Download CTA */}

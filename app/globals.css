@@ -180,7 +180,7 @@ body {
 
 @layer base {
   h1, h2, h3, h4 {
-    @apply font-headline mix-blend-difference;
+    @apply font-headline;
   }
   p, span, li, label, button, input, textarea {
     @apply font-body;

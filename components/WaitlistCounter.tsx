@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { getWaitlistCount } from '@/app/actions/waitlist';
-import { supabase } from "@/lib/supabase-client"
 
 
 interface WaitlistCounterProps {

@@ -172,6 +172,7 @@ export default function About() {
 
       {/* Social Nightlife Experience */}
       <section className="space-y-8">
+        <div className="floating"></div>
         <h2 className="text-3xl md:text-4xl font-bold gradient-text text-center">Social Nightlife Experience</h2>
         <div className="glass-card p-8 md:p-12 rounded-3xl">
           <p className="text-lg text-gray-300 mb-8 leading-relaxed">
@@ -256,7 +257,9 @@ export default function About() {
 
       {/* How Reviews Work */}
       <div className="glass-card p-8 md:p-12 rounded-3xl">
-        <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">How Reviews Work</h2>
+        <div className="floating">
+          <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-6">How Reviews Work</h2>
+        </div>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
           When you leave a review on a bar, your input directly shapes the bar&apos;s overall rating. Here&apos;s how it
           works:
