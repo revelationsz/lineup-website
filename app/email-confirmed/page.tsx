@@ -47,7 +47,9 @@ export default function EmailConfirmed() {
         </svg>
       </div>
 
-      <h1 className="text-4xl font-bold mb-4 text-purple-400">Email Confirmed!</h1>
+      <div className="floating">
+        <h1 className="text-6xl md:text-7xl font-bold gradient-text">Email Confirmed!</h1>
+      </div>
 
       <p className="text-xl mb-6 text-gray-300">
         Thank you for signing up for Lineup! Your email has been successfully verified. Please try logging back into the app again!

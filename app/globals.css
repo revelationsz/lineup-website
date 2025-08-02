@@ -88,19 +88,24 @@ body {
   }
 
   .animated-gradient {
-    /* Use brighter accent colours so the motion is perceptible */
+    /* Smoother purple-to-black flow */
     background: linear-gradient(
-      60deg,
-      rgb(120, 44, 150),
-      rgba(98, 15, 128),
-      rgb(0, 0, 0),
-      rgb(98, 15, 128),
-      rgb(99, 19, 131)
+      90deg,
+      /* #782c96 0%,  */
+      /* #6b248d 10%,  slightly darker */
+      #49186f 20%,  /* heading toward deep plum */
+      #360272 30%,  /* midnight violet */
+      #1a013c 40%,  /* ← new ultra-dark purple */
+      #000000 50%,  /* black midpoint */
+      #1a013c 60%,  /* ← new ultra-dark purple */
+      #360272 70%,  /* back up the scale */
+      #49186f 80%  /* heading toward deep plum */
+      /* #6b248d 90%  slightly darker */
+      /* #782c96 100% */
     );
-    background-size: 300% 300%;
+    background-size: 1000% 100%;
     animation: gradientShift 8s linear infinite;
   }
-
 
   .floating {
     animation: float 6s ease-in-out infinite;
@@ -118,8 +123,11 @@ body {
   0% {
     background-position: 0% 50%;
   }
+  /* 50% {
+    background-position: 100% 50%;
+  } */
   100% {
-    background-position: 200% 50%;
+    background-position: 100% 50%;
   }
 }
 

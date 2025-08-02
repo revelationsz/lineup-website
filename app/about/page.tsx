@@ -6,7 +6,9 @@ export default function About() {
     <div className="max-w-6xl mx-auto space-y-16">
       {/* Header Section */}
       <div className="text-center space-y-6">
-        <h1 className="text-5xl md:text-6xl font-bold gradient-text">About Lineup</h1>
+        <div className="floating">
+          <h1 className="text-6xl md:text-7xl font-bold gradient-text">About Lineup</h1>
+        </div>
         <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Your ultimate nightlife companion app designed to make your night out easier, more enjoyable, and completely
           <span className="gradient-text font-semibold"> hassle-free</span>.

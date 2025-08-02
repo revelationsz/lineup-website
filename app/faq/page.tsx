@@ -134,7 +134,9 @@ export default function FAQ() {
     <div className="max-w-4xl mx-auto space-y-8">
       {/* Header Section */}
       <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold gradient-text">Frequently Asked Questions</h1>
+      <div className="floating">
+          <h1 className="text-4xl md:text-5xl font-bold gradient-text">Frequently Asked Questions</h1>
+        </div>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
           Find answers to common questions about Lineup and how to make the most of your nightlife experience.
         </p>

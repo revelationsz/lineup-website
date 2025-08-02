@@ -137,9 +137,11 @@ export default function Home() {
       {/* Email Signup Section */}
       <section className="w-full max-w-4xl mx-auto">
         <div className="text-center mb-8">
+          <div className="floating">
           <h2 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
             Want Launch Updates?
           </h2>
+          </div>
           <p className="text-xl text-gray-300">
             Get notified when we go live in your city and receive exclusive early access perks.
           </p>

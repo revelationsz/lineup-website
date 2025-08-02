@@ -3,7 +3,9 @@ export default function Terms() {
     <div className="max-w-4xl mx-auto space-y-8">
       {/* Header Section */}
       <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold gradient-text">Terms of Service</h1>
+        <div className="floating">
+          <h1 className="text-6xl md:text-7xl font-bold gradient-text">Terms of Service</h1>
+        </div>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
           Please read these terms carefully before using Lineup. By using our app, you agree to these terms.
         </p>

@@ -3,7 +3,9 @@ export default function Privacy() {
     <div className="max-w-4xl mx-auto space-y-8">
       {/* Header Section */}
       <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-bold gradient-text">Privacy Policy</h1>
+        <div className="floating">
+          <h1 className="text-6xl md:text-7xl font-bold gradient-text">Privacy Policy</h1>
+        </div>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
           Your privacy is important to us. Learn how we collect, use, and protect your personal data.
         </p>
