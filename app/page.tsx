@@ -3,30 +3,32 @@ import EmailSignup from '../components/EmailSignup'
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center space-y-16">
-      {/* Hero Section */}
-      <section className="text-center space-y-8 pt-12">
-        <div className="floating">
-          <h1 className="text-6xl md:text-7xl font-bold gradient-text mb-6">
-            Welcome to Lineup
-          </h1>
+    <div className="flex flex-col items-center">
+      {/* Hero Section - Full viewport height */}
+
+      <div className="floating pt-[8.5rem] px-4">
+        <h1 className="text-6xl md:text-7xl font-bold gradient-text mb-6">
+          Welcome to Lineup
+        </h1>
+      </div>
+      
+      <section className="h-[56vh] w-full flex flex-col justify-between text-center px-4">
+        {/* Top: Tagline */}
+        <div className="flex-grow flex flex-col justify-center space-y-8">
+
+          {/* Main Tagline */}
+          <div className="floating mb-[12rem]">
+            <p className="text-4xl md:text-6xl font-bold text-white leading-tight">
+              The New Way to Plan Your Night Out
+            </p>
+          </div>
         </div>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-          <span className="gradient-text font-semibold"> Download the app now</span> to  
-          join the waitlist for our
-          <span className="gradient-text font-semibold"> LIMITED LAUNCH!!</span>
-        </p>
         
-        {/* Waitlist Counter */}
-        <WaitlistCounter className="py-8" />
-        
-        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-          Join those who are already on the waitlist! Download the app to secure your spot 
-          and be ready when we launch with Boston&apos;s hottest venues.
-        </p>
-        
-        {/* Download CTA */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+
+      </section>
+
+              {/* Bottom: Download CTA */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <a
             href="https://apps.apple.com/app/id6743187492?"
             className="glass-button px-8 py-4 rounded-2xl text-lg font-semibold text-white flex items-center gap-3 group"
@@ -36,7 +38,7 @@ export default function Home() {
             <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
             </svg>
-            Join Waitlist
+            Download Now
           </a>
           
           <a
@@ -52,7 +54,9 @@ export default function Home() {
             />
           </a>
         </div>
-      </section>
+
+      {/* Rest of content below the fold */}
+      <div className="flex flex-col items-center space-y-16 pt-16">
 
       {/* App Icon Section */}
       {/* <section className="floating">
@@ -161,6 +165,7 @@ export default function Home() {
           See How It Works
         </a>
       </section>
+      </div>
     </div>
   )
 }
