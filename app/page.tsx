@@ -1,4 +1,3 @@
-import WaitlistCounter from '../components/WaitlistCounter'
 import EmailSignup from '../components/EmailSignup'
 
 export default function Home() {
