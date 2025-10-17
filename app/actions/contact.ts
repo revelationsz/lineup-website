@@ -30,8 +30,8 @@ export async function sendContactForm(formData: FormData): Promise<{ success: bo
 
     // Send email using Resend
     const { error } = await resend.emails.send({
-      from: "LineUp Contact Form <onboarding@resend.dev>", // Use your verified domain
-      to: process.env.CONTACT_EMAIL!, // Your email address
+      from: "admin@line-up.biz", // Use your verified domain
+      to: process.env.CONTACT_EMAIL || "lineup.barapp@gmail.com", // Your email address
       subject: `New Contact Form Submission from ${name}`,
       text: `
         Name: ${name}
