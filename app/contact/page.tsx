@@ -40,12 +40,10 @@ export default function Contact() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="max-w-4xl mx-auto space-y-8 pt-24 px-6">
       {/* Header Section */}
       <div className="text-center space-y-4">
-        <div className="floating">
-          <h1 className="text-6xl md:text-7xl font-bold gradient-text">Contact Us</h1>
-        </div>
+        <h1 className="text-6xl md:text-7xl font-bold text-[#CAFF00]">Contact Us</h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
           Have questions or feedback? We&apos;d love to hear from you. Fill out the form below and we&apos;ll get back to
           you as soon as possible.
@@ -53,7 +51,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Form */}
-      <div className="glass-card p-8 md:p-12 rounded-3xl glow">
+      <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 md:p-12 rounded-3xl">
         {formStatus.message && (
           <div
             className={`p-6 mb-8 rounded-2xl border ${
@@ -87,13 +85,13 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                className="w-full px-4 py-3 glass rounded-xl border border-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-400 text-white placeholder-gray-400 transition-all duration-300"
+                className="w-full px-4 py-3 bg-white/10 rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-[#CAFF00]/30 focus:border-[#CAFF00] text-white placeholder-gray-400 transition-all duration-300"
                 placeholder="Your full name"
                 required
                 disabled={formStatus.isSubmitting}
               />
             </div>
-            
+
             <div className="space-y-2">
               <label htmlFor="email" className="block text-sm font-medium text-gray-300">
                 Email *
@@ -102,14 +100,14 @@ export default function Contact() {
                 type="email"
                 id="email"
                 name="email"
-                className="w-full px-4 py-3 glass rounded-xl border border-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-400 text-white placeholder-gray-400 transition-all duration-300"
+                className="w-full px-4 py-3 bg-white/10 rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-[#CAFF00]/30 focus:border-[#CAFF00] text-white placeholder-gray-400 transition-all duration-300"
                 placeholder="your.email@example.com"
                 required
                 disabled={formStatus.isSubmitting}
               />
             </div>
           </div>
-          
+
           <div className="space-y-2">
             <label htmlFor="message" className="block text-sm font-medium text-gray-300">
               Message *
@@ -118,17 +116,17 @@ export default function Contact() {
               id="message"
               name="message"
               rows={6}
-              className="w-full px-4 py-3 glass rounded-xl border border-purple-500/30 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-400 text-white placeholder-gray-400 transition-all duration-300 resize-none"
+              className="w-full px-4 py-3 bg-white/10 rounded-lg border border-white/10 focus:outline-none focus:ring-2 focus:ring-[#CAFF00]/30 focus:border-[#CAFF00] text-white placeholder-gray-400 transition-all duration-300 resize-none"
               placeholder="Tell us what's on your mind..."
               required
               disabled={formStatus.isSubmitting}
             ></textarea>
           </div>
-          
+
           <div className="pt-4">
             <button
               type="submit"
-              className="w-full glass-button px-8 py-4 rounded-xl text-lg font-semibold text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
+              className="w-full btn-lime text-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3"
               disabled={formStatus.isSubmitting}
             >
               {formStatus.isSubmitting ? (
@@ -153,10 +151,10 @@ export default function Contact() {
 
       {/* Additional Contact Info */}
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="glass-card p-8 rounded-2xl">
+        <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl">
           <div className="flex items-center gap-4 mb-4">
-            <div className="glass p-3 rounded-xl">
-              <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 p-3 rounded-xl">
+              <svg className="w-6 h-6 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
@@ -167,10 +165,10 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="glass-card p-8 rounded-2xl">
+        <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-2xl">
           <div className="flex items-center gap-4 mb-4">
-            <div className="glass p-3 rounded-xl">
-              <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white/10 p-3 rounded-xl">
+              <svg className="w-6 h-6 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
@@ -184,4 +182,3 @@ export default function Contact() {
     </div>
   )
 }
-

@@ -43,7 +43,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
       description: "Target users within walking distance when they&apos;re actively looking for their next spot."
     },
     {
-      title: "Data You Can Use Tomorrow", 
+      title: "Data You Can Use Tomorrow",
       description: "See which promotions drive the most foot traffic and optimize your offerings in real-time."
     },
     {
@@ -82,7 +82,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
           <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
             Immediate Benefits
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {immediateBenefits.map((benefit, index) => (
               <motion.div
@@ -93,14 +93,14 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
-                <div className="w-16 h-16 bg-brand-purple text-white rounded-xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-[#CAFF00] text-[#0A0A0A] rounded-xl flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
-                
+
                 <h4 className="text-xl font-bold text-gray-900 mb-4">
                   {benefit.title}
                 </h4>
-                
+
                 <p className="text-gray-600 leading-relaxed">
                   {benefit.description}
                 </p>
@@ -115,12 +115,12 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-brand-purple to-purple-700 rounded-3xl p-8 md:p-12 text-white"
+          className="bg-[#CAFF00] rounded-3xl p-8 md:p-12 text-[#0A0A0A]"
         >
           <h3 className="text-3xl font-bold text-center mb-12">
             Future Promise
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {futurePromises.map((promise, index) => (
               <motion.div
@@ -131,15 +131,15 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-6 h-6 bg-brand-green rounded-full"></div>
+                <div className="w-12 h-12 bg-[#0A0A0A]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-6 h-6 bg-[#0A0A0A] rounded-full"></div>
                 </div>
-                
+
                 <h4 className="text-xl font-bold mb-3">
                   {promise.title}
                 </h4>
-                
-                <p className="text-white/90 leading-relaxed">
+
+                <p className="text-[#0A0A0A]/80 leading-relaxed">
                   {promise.description}
                 </p>
               </motion.div>
@@ -156,23 +156,23 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
         >
           <div>
-            <div className="text-4xl font-bold text-brand-purple mb-2">2,500+</div>
+            <div className="text-4xl font-bold text-[#0A0A0A] mb-2">2,500+</div>
             <div className="text-gray-600">Active Users</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-brand-purple mb-2">$127</div>
+            <div className="text-4xl font-bold text-[#0A0A0A] mb-2">$127</div>
             <div className="text-gray-600">Avg Check Size</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-brand-purple mb-2">23%</div>
+            <div className="text-4xl font-bold text-[#0A0A0A] mb-2">23%</div>
             <div className="text-gray-600">Revenue Increase</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-brand-purple mb-2">48hrs</div>
+            <div className="text-4xl font-bold text-[#0A0A0A] mb-2">48hrs</div>
             <div className="text-gray-600">Setup Time</div>
           </div>
         </motion.div>
       </div>
     </section>
   );
-} 
+}

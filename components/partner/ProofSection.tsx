@@ -7,7 +7,6 @@ interface ProofSectionProps {
 }
 
 export default function ProofSection({ className = '' }: ProofSectionProps) {
-  // TODO: Replace with actual partner logos and testimonials
   const partnerLogos = [
     { name: 'The Sinclair', logo: 'TS' },
     { name: 'House of Blues', logo: 'HB' },
@@ -25,14 +24,14 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
     },
     {
       quote: "&ldquo;We filled our 9 PM dead zone with targeted specials. Revenue up 23% on weeknights.&rdquo;",
-      author: "Mike Rodriguez", 
+      author: "Mike Rodriguez",
       venue: "Paradise Rock Club",
       role: "Operations Director"
     },
     {
       quote: "&ldquo;The VIP boost feature put us at the top of every user&apos;s feed. Best marketing ROI we&apos;ve seen.&rdquo;",
       author: "Jessica Park",
-      venue: "Royale Boston", 
+      venue: "Royale Boston",
       role: "Marketing Manager"
     }
   ];
@@ -51,7 +50,7 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
           <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-8">
             Trusted by Boston&apos;s Top Venues
           </h2>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
             {partnerLogos.map((partner, index) => (
               <motion.div
@@ -62,7 +61,6 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
                 viewport={{ once: true }}
                 className="flex flex-col items-center"
               >
-                {/* TODO: Replace with actual logos */}
                 <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center mb-2">
                   <span className="text-xl font-bold text-gray-600">{partner.logo}</span>
                 </div>
@@ -90,7 +88,7 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
               className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-start mb-4">
-                <div className="flex text-brand-green">
+                <div className="flex text-[#CAFF00]">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
@@ -98,16 +96,16 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
                   ))}
                 </div>
               </div>
-              
-              <blockquote 
+
+              <blockquote
                 className="text-gray-700 mb-4 italic"
                 dangerouslySetInnerHTML={{ __html: testimonial.quote }}
               />
-              
+
               <div className="border-t pt-4">
                 <div className="font-semibold text-gray-900">{testimonial.author}</div>
                 <div className="text-sm text-gray-600">{testimonial.role}</div>
-                <div className="text-sm font-medium text-brand-purple">{testimonial.venue}</div>
+                <div className="text-sm font-medium text-[#0A0A0A]">{testimonial.venue}</div>
               </div>
             </motion.div>
           ))}
@@ -122,28 +120,28 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
         >
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-brand-purple rounded-full flex items-center justify-center mb-3">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 bg-[#CAFF00] rounded-full flex items-center justify-center mb-3">
+              <svg className="w-6 h-6 text-[#0A0A0A]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
             <h3 className="font-semibold text-gray-900 mb-1">Zero Upfront Cost</h3>
             <p className="text-sm text-gray-600">Only pay when customers redeem points</p>
           </div>
-          
+
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-brand-green rounded-full flex items-center justify-center mb-3">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 bg-[#CAFF00] rounded-full flex items-center justify-center mb-3">
+              <svg className="w-6 h-6 text-[#0A0A0A]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
               </svg>
             </div>
             <h3 className="font-semibold text-gray-900 mb-1">Instant Setup</h3>
             <p className="text-sm text-gray-600">Live in your venue within 48 hours</p>
           </div>
-          
+
           <div className="flex flex-col items-center">
-            <div className="w-12 h-12 bg-brand-purple rounded-full flex items-center justify-center mb-3">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <div className="w-12 h-12 bg-[#CAFF00] rounded-full flex items-center justify-center mb-3">
+              <svg className="w-6 h-6 text-[#0A0A0A]" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
               </svg>
             </div>
@@ -154,4 +152,4 @@ export default function ProofSection({ className = '' }: ProofSectionProps) {
       </div>
     </section>
   );
-} 
+}

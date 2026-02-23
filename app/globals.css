@@ -3,180 +3,141 @@
 @tailwind utilities;
 
 :root {
-  /* Confetti.io palette */
-  --base: #0b0b0c;
-  --fg: #ffffff;
-  --accent-primary: #e0e0e0;
-  --accent-secondary: #4c1263;
-  --muted: #8a8a8f;
-  /* Spacing scale */
-  --space-xxl: 8rem;
-  --space-xl: 5rem;
-  --space-l: 3rem;
-  --space-m: 1.5rem;
-  --space-s: 0.75rem;
-
-  /* Glass variables kept for now (can revisit when re-skinning components) */
-  --purple-primary: #8b5cf6;
-  --purple-secondary: #a855f7;
-  --purple-dark: #6d28d9;
-  --glass-bg: rgba(139, 92, 246, 0.1);
-  --glass-border: rgba(139, 92, 246, 0.2);
-  --glass-shadow: rgba(139, 92, 246, 0.3);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --base: #0b0b0c;
-    --fg: #ffffff;
-  }
+  --bg-dark: #0A0A0A;
+  --bg-light: #FFFFFF;
+  --accent-lime: #CAFF00;
+  --fg-on-dark: #FFFFFF;
+  --fg-on-light: #0A0A0A;
+  --muted: #8A8A8F;
 }
 
 body {
-  color: var(--fg);
-  background-color: #000000;
-  /* background: //linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 25%, #16213e 50%, #0f0f23 75%, #0a0a0a 100%); */
-  background-attachment: fixed;
+  color: var(--fg-on-dark);
+  background-color: var(--bg-dark);
   font-family: var(--font-body), 'Inter', Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
 
-/* Glassmorphism utility classes */
+/* ════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ════════════════════════════════════════════════════ */
 @layer utilities {
-  .glass {
-    background: rgba(139, 92, 246, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(139, 92, 246, 0.2);
-    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+
+  /* ── Lime pill button ── */
+  .btn-lime {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #CAFF00;
+    color: #0A0A0A;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 0.875rem 2rem;
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+  .btn-lime:hover {
+    background-color: #b8e600;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(202, 255, 0, 0.3);
   }
 
-  .glass-card {
-    background: rgba(15, 15, 35, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(139, 92, 246, 0.3);
-    box-shadow:
-      0 8px 32px rgba(139, 92, 246, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  /* ── Dark pill button ── */
+  .btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+    font-weight: 700;
+    border-radius: 9999px;
+    padding: 0.875rem 2rem;
+    transition: all 0.25s ease;
+    text-decoration: none;
+  }
+  .btn-dark:hover {
+    background-color: #1a1a1a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
-  .glass-button {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 0.8), rgba(168, 85, 247, 0.8));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(139, 92, 246, 0.4);
-    box-shadow:
-      0 4px 16px rgba(139, 92, 246, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
+  /* ── Section backgrounds ── */
+  .section-dark {
+    background-color: #0A0A0A;
+    color: #FFFFFF;
+  }
+  .section-light {
+    background-color: #FFFFFF;
+    color: #0A0A0A;
+  }
+  .section-lime {
+    background-color: #CAFF00;
+    color: #0A0A0A;
   }
 
-  .glass-button:hover {
-    background: linear-gradient(135deg, rgba(139, 92, 246, 1), rgba(168, 85, 247, 1));
-    box-shadow:
-      0 6px 24px rgba(139, 92, 246, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-  }
-
-  .gradient-text {
-    background: linear-gradient(135deg, #8b5cf6, #a855f7, #c084fc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .animated-gradient {
-    /* Smoother purple-to-black flow */
-    background: linear-gradient(
-      90deg,
-      /* #782c96 0%,  */
-      /* #6b248d 10%,  slightly darker */
-      #49186f 20%,  /* heading toward deep plum */
-      #360272 30%,  /* midnight violet */
-      #1a013c 40%,  /* ← new ultra-dark purple */
-      #000000 50%,  /* black midpoint */
-      #1a013c 60%,  /* ← new ultra-dark purple */
-      #360272 70%,  /* back up the scale */
-      #49186f 80%  /* heading toward deep plum */
-      /* #6b248d 90%  slightly darker */
-      /* #782c96 100% */
-    );
-    background-size: 1000% 100%;
-    animation: gradientShift 8s linear infinite;
-  }
-
-  .floating {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .glow {
-    box-shadow:
-      0 0 20px rgba(139, 92, 246, 0.3),
-      0 0 40px rgba(139, 92, 246, 0.2),
-      0 0 60px rgba(139, 92, 246, 0.1);
+  /* ── Display text ── */
+  .display-text {
+    font-family: var(--font-headline), 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 0.95;
+    text-transform: uppercase;
   }
 }
 
-@keyframes gradientShift {
+/* ════════════════════════════════════════════════════
+   KEYFRAMES
+   ════════════════════════════════════════════════════ */
+
+@keyframes marquee {
   0% {
-    background-position: 0% 50%;
+    transform: translateX(0);
   }
-  /* 50% {
-    background-position: 100% 50%;
-  } */
   100% {
-    background-position: 100% 50%;
+    transform: translateX(-50%);
   }
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* ════════════════════════════════════════════════════
+   IMAGE BLUR-TO-SHARP
+   ════════════════════════════════════════════════════ */
+
+img[data-animate-blur] {
+  filter: blur(20px);
+  opacity: 0;
+  transition: filter 0.8s ease-out, opacity 0.8s ease-out;
+}
+img[data-animate-blur].loaded {
+  filter: blur(0);
+  opacity: 1;
 }
 
-/* Custom scrollbar */
+/* ════════════════════════════════════════════════════
+   SCROLLBAR
+   ════════════════════════════════════════════════════ */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 15, 35, 0.3);
+  background: #1a1a1a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #8b5cf6, #a855f7);
+  background: #CAFF00;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #a855f7, #c084fc);
+  background: #b8e600;
 }
 
-/* Add Confetti blob background */
-@layer utilities {
-  .bg-custom-confetti {
-    @apply fixed inset-0 -z-10;
-  }
-}
-
-
-@keyframes wave {
-  0% {
-    background-position: -100% 0%;
-  }
-  50% {
-    background-position: 200% 0%;
-  }
-  100% {
-    background-position: -100% 0%;
-  }
-}
+/* ════════════════════════════════════════════════════
+   BASE TYPOGRAPHY
+   ════════════════════════════════════════════════════ */
 
 @layer base {
   h1, h2, h3, h4 {

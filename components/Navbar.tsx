@@ -7,18 +7,18 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="glass sticky top-0 z-50 border-b border-purple-500/20">
-      <nav className="container mx-auto flex justify-between items-center p-4">
-        <Link href="/" className="text-2xl font-bold gradient-text hover:scale-105 transition-transform">
-          Lineup
+    <header className="fixed top-0 w-full z-50 bg-[#0A0A0A]/80 backdrop-blur-md border-b border-white/5">
+      <nav className="max-w-content mx-auto flex justify-between items-center px-6 py-4">
+        <Link href="/" className="text-xl font-bold text-white tracking-tight hover:opacity-80 transition-opacity">
+          LINEUP
         </Link>
-        
+
         {/* Hamburger button for small screens */}
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle Menu"
-            className="glass-button p-2 rounded-lg focus:outline-none"
+            className="p-2 text-white focus:outline-none"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
@@ -30,104 +30,70 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        
+
         {/* Full navigation for larger screens */}
-        <ul className="hidden md:flex space-x-6">
-          <li>
-            <Link href="/" className="text-gray-300 hover:text-purple-300 transition-colors relative group">
-              Home
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about" className="text-gray-300 hover:text-purple-300 transition-colors relative group">
-              About
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/faq" className="text-gray-300 hover:text-purple-300 transition-colors relative group">
-              FAQ
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/terms" className="text-gray-300 hover:text-purple-300 transition-colors relative group">
-              Terms
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/privacy" className="text-gray-300 hover:text-purple-300 transition-colors relative group">
-              Privacy
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact" className="glass-button px-4 py-2 rounded-lg text-white font-medium">
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <Link href="/about" className="text-white/80 hover:text-white transition-colors text-sm">
+            About
+          </Link>
+          <Link href="/faq" className="text-white/80 hover:text-white transition-colors text-sm">
+            FAQ
+          </Link>
+          <Link href="/contact" className="text-white/80 hover:text-white transition-colors text-sm">
+            Contact
+          </Link>
+          <a
+            href="https://apps.apple.com/app/id6743187492"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-lime text-sm !py-2 !px-5"
+          >
+            Download App
+          </a>
+        </div>
       </nav>
-      
+
       {/* Dropdown menu for small screens */}
       {menuOpen && (
-        <nav className="md:hidden glass-card mx-4 mb-4 rounded-lg border border-purple-500/30">
-          <ul className="flex flex-col p-4 space-y-3">
+        <nav className="md:hidden bg-[#141414] border-t border-white/5">
+          <ul className="flex flex-col p-4 space-y-1">
             <li>
-              <Link 
-                href="/" 
-                onClick={() => setMenuOpen(false)} 
-                className="block text-gray-300 hover:text-purple-300 transition-colors py-2 px-3 rounded hover:bg-purple-500/10"
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/about" 
-                onClick={() => setMenuOpen(false)} 
-                className="block text-gray-300 hover:text-purple-300 transition-colors py-2 px-3 rounded hover:bg-purple-500/10"
+              <Link
+                href="/about"
+                onClick={() => setMenuOpen(false)}
+                className="block text-white/80 hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-white/5"
               >
                 About
               </Link>
             </li>
             <li>
-              <Link 
-                href="/faq" 
-                onClick={() => setMenuOpen(false)} 
-                className="block text-gray-300 hover:text-purple-300 transition-colors py-2 px-3 rounded hover:bg-purple-500/10"
+              <Link
+                href="/faq"
+                onClick={() => setMenuOpen(false)}
+                className="block text-white/80 hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-white/5"
               >
                 FAQ
               </Link>
             </li>
             <li>
-              <Link 
-                href="/terms" 
-                onClick={() => setMenuOpen(false)} 
-                className="block text-gray-300 hover:text-purple-300 transition-colors py-2 px-3 rounded hover:bg-purple-500/10"
-              >
-                Terms
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/privacy" 
-                onClick={() => setMenuOpen(false)} 
-                className="block text-gray-300 hover:text-purple-300 transition-colors py-2 px-3 rounded hover:bg-purple-500/10"
-              >
-                Privacy
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/contact" 
-                onClick={() => setMenuOpen(false)} 
-                className="block glass-button text-center py-2 px-3 rounded text-white font-medium"
+              <Link
+                href="/contact"
+                onClick={() => setMenuOpen(false)}
+                className="block text-white/80 hover:text-white transition-colors py-3 px-4 rounded-lg hover:bg-white/5"
               >
                 Contact
               </Link>
+            </li>
+            <li className="pt-2">
+              <a
+                href="https://apps.apple.com/app/id6743187492"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="block btn-lime text-center text-sm"
+              >
+                Download App
+              </a>
             </li>
           </ul>
         </nav>
