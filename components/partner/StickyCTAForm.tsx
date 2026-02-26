@@ -48,7 +48,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) return;
 
     setIsSubmitting(true);
@@ -74,7 +74,6 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
           phone: '',
           bestNight: ''
         });
-        // Close form after successful submission
         setTimeout(() => {
           setIsFormOpen(false);
           setSubmitMessage('');
@@ -91,7 +90,6 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
-    // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }));
     }
@@ -113,20 +111,20 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="hidden sm:block fixed bottom-6 right-6 z-50"
           >
-            <div className="bg-brand-purple shadow-2xl rounded-2xl p-6 max-w-sm">
+            <div className="bg-[#0A0A0A] border border-white/10 shadow-2xl rounded-2xl p-6 max-w-sm">
               <h3 className="text-white font-bold text-lg mb-2">
                 Ready to Get Started?
               </h3>
-              <p className="text-white/90 text-sm mb-4">
+              <p className="text-white/70 text-sm mb-4">
                 Join 15+ Boston venues already seeing results
               </p>
               <button
                 onClick={() => setIsFormOpen(true)}
-                className="w-full bg-brand-green hover:bg-green-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="w-full btn-lime"
               >
                 Become a Launch Partner
               </button>
-              <div className="flex items-center justify-center mt-3 text-white/80 text-xs">
+              <div className="flex items-center justify-center mt-3 text-white/60 text-xs">
                 <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
@@ -143,24 +141,24 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="sm:hidden fixed bottom-0 left-0 right-0 z-50"
           >
-            <div className="bg-brand-purple p-4 shadow-2xl">
+            <div className="bg-[#0A0A0A] border-t border-white/10 p-4 shadow-2xl">
               <div className="flex items-center justify-between mb-3">
                 <div>
                   <h3 className="text-white font-bold text-lg">
                     Launch Partner Program
                   </h3>
-                  <p className="text-white/90 text-sm">
+                  <p className="text-white/70 text-sm">
                     Risk-free 30-day pilot
                   </p>
                 </div>
                 <button
                   onClick={() => setIsFormOpen(true)}
-                  className="bg-brand-green hover:bg-green-500 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300"
+                  className="btn-lime !py-2 !px-4"
                 >
                   Apply Now
                 </button>
               </div>
-              <div className="flex items-center text-white/80 text-xs">
+              <div className="flex items-center text-white/60 text-xs">
                 <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
@@ -202,8 +200,8 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
 
                 {submitMessage && (
                   <div className={`mb-4 p-3 rounded-lg ${
-                    submitMessage.includes('success') 
-                      ? 'bg-green-100 text-green-800 border border-green-200' 
+                    submitMessage.includes('success')
+                      ? 'bg-green-100 text-green-800 border border-green-200'
                       : 'bg-red-100 text-red-800 border border-red-200'
                   }`}>
                     {submitMessage}
@@ -219,7 +217,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                       type="text"
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.name ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="John Smith"
@@ -235,7 +233,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                       type="text"
                       value={formData.venue}
                       onChange={(e) => handleInputChange('venue', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.venue ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="The Sinclair"
@@ -251,7 +249,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.email ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="john@venue.com"
@@ -267,7 +265,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.phone ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="(617) 555-0123"
@@ -282,7 +280,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                     <select
                       value={formData.bestNight}
                       onChange={(e) => handleInputChange('bestNight', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.bestNight ? 'border-red-300' : 'border-gray-300'
                       }`}
                     >
@@ -297,7 +295,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-brand-purple hover:bg-purple-700 disabled:bg-gray-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:transform-none"
+                    className="w-full btn-lime disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? 'Submitting...' : 'Apply for Launch Partner Program'}
                   </button>
@@ -313,4 +311,4 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
       )}
     </AnimatePresence>
   );
-} 
+}

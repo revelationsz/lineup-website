@@ -26,7 +26,7 @@ export default function FAQ() {
       ),
     },
     {
-      question: "How does the app know what's happening at each bar?",
+      question: "How does the app know what&apos;s happening at each bar?",
       answer: (
         <p className="leading-relaxed">
           Our community of users updates each bar&apos;s info live by submitting quick reviews. You help others by
@@ -61,25 +61,25 @@ export default function FAQ() {
       ),
     },
     {
-      question: "Can I find bars based on what I'm looking for?",
+      question: "Can I find bars based on what I&apos;m looking for?",
       answer: (
         <div className="space-y-3">
           <p className="leading-relaxed">Yes! You can filter by:</p>
           <ul className="space-y-2 ml-4">
             <li className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-[#8B5CF6] rounded-full"></div>
               <span>Music style (Jazz, Pop, Rock, etc.)</span>
             </li>
             <li className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-[#8B5CF6] rounded-full"></div>
               <span>Line length (Short, Medium, Long)</span>
             </li>
             <li className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-[#8B5CF6] rounded-full"></div>
               <span>Distance from you</span>
             </li>
             <li className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <div className="w-2 h-2 bg-[#8B5CF6] rounded-full"></div>
               <span>Bar tags like Rooftop, Dance Club, Brewery, and more</span>
             </li>
           </ul>
@@ -131,12 +131,32 @@ export default function FAQ() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Purple blobs background */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="gradient-blob absolute w-[480px] h-[480px] rounded-full opacity-80"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.9), transparent 65%)',
+            filter: 'blur(100px)',
+            top: '5%',
+            left: '10%',
+          }}
+        />
+        <div
+          className="gradient-blob absolute w-[420px] h-[420px] rounded-full opacity-85"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(71, 16, 199, 0.85), transparent 65%)',
+            filter: 'blur(100px)',
+            bottom: '10%',
+            right: '15%',
+          }}
+        />
+      </div>
+    <div className="relative z-10 max-w-4xl mx-auto space-y-8 pt-24 px-6 pb-24">
       {/* Header Section */}
       <div className="text-center space-y-4">
-      <div className="floating">
-          <h1 className="text-4xl md:text-5xl font-bold gradient-text">Frequently Asked Questions</h1>
-        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#8B5CF6]">Frequently Asked Questions</h1>
         <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
           Find answers to common questions about Lineup and how to make the most of your nightlife experience.
         </p>
@@ -145,18 +165,18 @@ export default function FAQ() {
       {/* FAQ Items */}
       <div className="space-y-6">
         {faqItems.map((item, index) => (
-          <div key={index} className="glass-card rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300">
+          <div key={index} className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300">
             <button
               onClick={() => toggleQuestion(index)}
               className="w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none group"
             >
-              <span className="text-lg md:text-xl font-semibold text-white group-hover:gradient-text transition-all duration-300">
+              <span className="text-lg md:text-xl font-semibold text-white group-hover:text-[#8B5CF6] transition-all duration-300">
                 {item.question}
               </span>
-              <div className="glass p-2 rounded-lg group-hover:glow transition-all duration-300">
+              <div className="bg-white/10 p-2 rounded-lg transition-all duration-300">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`h-5 w-5 text-purple-400 transition-transform duration-300 ${
+                  className={`h-5 w-5 text-[#8B5CF6] transition-transform duration-300 ${
                     openIndex === index ? "transform rotate-180" : ""
                   }`}
                   fill="none"
@@ -172,7 +192,7 @@ export default function FAQ() {
                 openIndex === index ? "max-h-96 pb-8" : "max-h-0"
               }`}
             >
-              <div className="text-gray-300 border-t border-purple-500/20 pt-6">
+              <div className="text-gray-300 border-t border-white/10 pt-6">
                 {item.answer}
               </div>
             </div>
@@ -181,14 +201,14 @@ export default function FAQ() {
       </div>
 
       {/* Contact CTA */}
-      <div className="glass-card p-8 md:p-12 rounded-3xl text-center glow">
-        <h2 className="text-2xl md:text-3xl font-bold gradient-text mb-4">Still have questions?</h2>
+      <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 md:p-12 rounded-3xl text-center">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#8B5CF6] mb-4">Still have questions?</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
           Can&apos;t find what you&apos;re looking for? Our support team is here to help.
         </p>
         <a
           href="/contact"
-          className="glass-button px-8 py-4 rounded-2xl text-lg font-semibold text-white inline-flex items-center gap-3 group"
+          className="btn-lime px-8 py-4 rounded-2xl text-lg font-semibold text-white inline-flex items-center gap-3 group"
         >
           <svg className="w-6 h-6 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -196,6 +216,7 @@ export default function FAQ() {
           Contact Support
         </a>
       </div>
+    </div>
     </div>
   )
 }

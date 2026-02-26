@@ -19,10 +19,9 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
   });
 
   useEffect(() => {
-    // Calculate ROI metrics
-    const rewardCost = 12; // Average cost of free drink
-    const additionalSpendMultiplier = 2.3; // Users typically spend 2.3x more after initial reward
-    
+    const rewardCost = 12;
+    const additionalSpendMultiplier = 2.3;
+
     const monthlyRewardCost = coversRedeemed * rewardCost;
     const monthlyGrossRevenue = coversRedeemed * avgCheckSize * additionalSpendMultiplier;
     const monthlyNetRevenue = monthlyGrossRevenue - monthlyRewardCost;
@@ -79,7 +78,6 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
             </h3>
 
             <div className="space-y-6">
-              {/* Average Check Size */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-3">
                   Average Check Size per Customer
@@ -90,7 +88,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                     type="number"
                     value={avgCheckSize}
                     onChange={(e) => setAvgCheckSize(Number(e.target.value))}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent text-lg"
+                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent text-lg"
                     min="0"
                     step="5"
                   />
@@ -100,7 +98,6 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                 </p>
               </div>
 
-              {/* Monthly Redemptions */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-3">
                   Expected Monthly Point Redemptions
@@ -109,7 +106,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   type="number"
                   value={coversRedeemed}
                   onChange={(e) => setCoversRedeemed(Number(e.target.value))}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-purple focus:border-transparent text-lg"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent text-lg"
                   min="0"
                   step="10"
                 />
@@ -118,7 +115,6 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                 </p>
               </div>
 
-              {/* Slider for visual input */}
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-3">
                   Adjust Monthly Redemptions
@@ -131,7 +127,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   onChange={(e) => setCoversRedeemed(Number(e.target.value))}
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                   style={{
-                    background: `linear-gradient(to right, #6B5BFF 0%, #6B5BFF ${(coversRedeemed / 200) * 100}%, #e5e7eb ${(coversRedeemed / 200) * 100}%, #e5e7eb 100%)`
+                    background: `linear-gradient(to right, #8B5CF6 0%, #8B5CF6 ${(coversRedeemed / 200) * 100}%, #e5e7eb ${(coversRedeemed / 200) * 100}%, #e5e7eb 100%)`
                   }}
                 />
                 <div className="flex justify-between text-sm text-gray-500 mt-1">
@@ -148,22 +144,20 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-brand-purple to-purple-700 rounded-2xl p-8 text-white"
+            className="bg-[#0A0A0A] rounded-2xl p-8 text-white"
           >
             <h3 className="text-2xl font-bold mb-6">
               Your Projected Results
             </h3>
 
             <div className="space-y-6">
-              {/* Monthly Revenue */}
               <div className="bg-white/10 rounded-xl p-4">
                 <div className="text-sm text-white/80 mb-1">Monthly Additional Revenue</div>
-                <div className="text-3xl font-bold text-brand-green">
+                <div className="text-3xl font-bold text-[#8B5CF6]">
                   {formatCurrency(results.monthlyRevenue)}
                 </div>
               </div>
 
-              {/* Cost of Rewards */}
               <div className="bg-white/10 rounded-xl p-4">
                 <div className="text-sm text-white/80 mb-1">Cost of Rewards</div>
                 <div className="text-2xl font-bold">
@@ -171,32 +165,28 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                 </div>
               </div>
 
-              {/* Net Revenue */}
-              <div className="bg-brand-green/20 rounded-xl p-4 border border-brand-green/30">
+              <div className="bg-[#8B5CF6]/20 rounded-xl p-4 border border-[#8B5CF6]/30">
                 <div className="text-sm text-white/80 mb-1">Monthly Net Revenue</div>
-                <div className="text-3xl font-bold text-brand-green">
+                <div className="text-3xl font-bold text-[#8B5CF6]">
                   {formatCurrency(results.netRevenue)}
                 </div>
               </div>
 
-              {/* ROI */}
               <div className="bg-white/10 rounded-xl p-4">
                 <div className="text-sm text-white/80 mb-1">Return on Investment</div>
-                <div className="text-2xl font-bold text-brand-green">
+                <div className="text-2xl font-bold text-[#8B5CF6]">
                   {results.roi.toFixed(0)}%
                 </div>
               </div>
 
-              {/* Yearly Projection */}
               <div className="border-t border-white/20 pt-4">
                 <div className="text-sm text-white/80 mb-1">Yearly Net Revenue</div>
-                <div className="text-4xl font-bold text-brand-green">
+                <div className="text-4xl font-bold text-[#8B5CF6]">
                   {formatCurrency(results.yearlyRevenue)}
                 </div>
               </div>
             </div>
 
-            {/* Assumptions */}
             <div className="mt-8 pt-6 border-t border-white/20">
               <h4 className="font-semibold mb-3 text-white/90">Assumptions:</h4>
               <ul className="text-sm text-white/80 space-y-1">
@@ -223,7 +213,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
             <p className="text-gray-600 mb-6">
               Join our pilot program and see these results in your venue within 30 days
             </p>
-            <button className="bg-brand-purple hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
+            <button className="btn-lime text-lg">
               Apply for Launch Partner Program
             </button>
           </div>
@@ -231,4 +221,4 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
       </div>
     </section>
   );
-} 
+}

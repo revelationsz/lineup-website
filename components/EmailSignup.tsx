@@ -17,23 +17,23 @@ export default function EmailSignup({ className = '' }: EmailSignupProps) {
     if (!email) return;
 
     setIsLoading(true);
-    
+
     const { success, error } = await addEmailToLaunchUpdates(email);
-    
+
     if (success) {
       setIsSubmitted(true);
       setEmail('');
     } else {
       console.error("Failed to add email:", error);
     }
-    
+
     setIsLoading(false);
   };
 
   if (isSubmitted) {
     return (
       <div className={`text-center ${className}`}>
-        <div className="glass-card p-8 rounded-2xl max-w-md mx-auto">
+        <div className="bg-[#E4E4E4] rounded-2xl p-10 max-w-md mx-auto">
           <div className="flex items-center justify-center mb-4">
             <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -41,13 +41,13 @@ export default function EmailSignup({ className = '' }: EmailSignupProps) {
               </svg>
             </div>
           </div>
-          <h3 className="text-xl font-bold text-white mb-2">You&apos;re on the list!</h3>
-          <p className="text-gray-300 mb-4">
+          <h3 className="text-xl font-bold text-[#0A0A0A] mb-2">You&apos;re on the list!</h3>
+          <p className="text-[#0A0A0A]/60 mb-4">
             We&apos;ll notify you when we have updates about the app launch and exclusive early access opportunities.
           </p>
-          <button 
+          <button
             onClick={() => setIsSubmitted(false)}
-            className="text-purple-400 hover:text-purple-300 font-medium transition-colors"
+            className="text-[#0A0A0A] font-medium hover:opacity-70 transition-opacity underline"
           >
             Sign up another email
           </button>
@@ -58,14 +58,14 @@ export default function EmailSignup({ className = '' }: EmailSignupProps) {
 
   return (
     <div className={`text-center ${className}`}>
-      <div className="glass-card p-8 rounded-2xl max-w-md mx-auto">
-        <h3 className="text-2xl font-bold text-white mb-2">
+      <div className="bg-[#E4E4E4] rounded-2xl p-10 max-w-md mx-auto">
+        <h3 className="text-2xl font-bold text-[#0A0A0A] mb-2">
           Get Launch Updates
         </h3>
-        <p className="text-gray-300 mb-6">
+        <p className="text-[#0A0A0A]/60 mb-6">
           Be the first to know when we launch in your city and get exclusive early access.
         </p>
-        
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
             <input
@@ -73,15 +73,15 @@ export default function EmailSignup({ className = '' }: EmailSignupProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all"
+              className="w-full px-4 py-3 bg-black text-white rounded-lg placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] border-0 transition-all"
               required
             />
           </div>
-          
+
           <button
             type="submit"
             disabled={isLoading || !email}
-            className="w-full glass-button px-6 py-3 rounded-xl font-semibold text-white disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 group"
+            className="w-full btn-lime disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {isLoading ? (
               <>
@@ -91,18 +91,18 @@ export default function EmailSignup({ className = '' }: EmailSignupProps) {
             ) : (
               <>
                 Join Waitlist
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </>
             )}
           </button>
         </form>
-        
-        <p className="text-xs text-gray-400 mt-4">
+
+        <p className="text-xs text-[#0A0A0A]/40 mt-4">
           We respect your privacy. No spam, unsubscribe anytime.
         </p>
       </div>
     </div>
   );
-} 
+}

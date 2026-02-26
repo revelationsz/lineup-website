@@ -16,10 +16,8 @@ export default function EmailConfirmed() {
   }, []);
 
   const handleDeeplink = () => {
-    // Try to open the app
     window.location.href = 'lineup://signin';
-    
-    // Fallback: if the app doesn't open within 2 seconds, suggest download
+
     setTimeout(() => {
       if (confirm('Unable to open the Lineup app. Would you like to download it from the App Store?')) {
         window.open('https://apps.apple.com/app/id6743187492', '_blank');
@@ -28,7 +26,7 @@ export default function EmailConfirmed() {
   };
 
   return (
-    <div className="flex flex-col items-center max-w-2xl mx-auto text-center">
+    <div className="flex flex-col items-center max-w-2xl mx-auto text-center pt-24 px-6 pb-24">
       <div className="bg-green-500 rounded-full p-4 mb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,11 +45,9 @@ export default function EmailConfirmed() {
         </svg>
       </div>
 
-      <div className="floating">
-        <h1 className="text-6xl md:text-7xl font-bold gradient-text">Email Confirmed!</h1>
-      </div>
+      <h1 className="text-6xl md:text-7xl font-bold text-[#8B5CF6]">Email Confirmed!</h1>
 
-      <p className="text-xl mb-6 text-gray-300">
+      <p className="text-xl mb-6 text-gray-300 mt-4">
         Thank you for signing up for Lineup! Your email has been successfully verified. Please try logging back into the app again!
       </p>
 
@@ -59,7 +55,7 @@ export default function EmailConfirmed() {
         {isMobile && (
           <button
             onClick={handleDeeplink}
-            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 w-full max-w-sm"
+            className="btn-lime font-bold py-4 px-8 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-3 w-full max-w-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -93,12 +89,15 @@ export default function EmailConfirmed() {
               className="h-14"
             />
           </a>
-          
+
+          <p className="text-gray-400 text-sm">
+            {isMobile ? "Don&apos;t have the app yet?" : "Download the Lineup app:"}
+          </p>
         </div>
       </div>
 
-      <div className="bg-gray-900 p-6 rounded-lg shadow-lg mt-8 w-full">
-        <h2 className="text-2xl font-semibold mb-4 text-purple-400">What&apos;s Next?</h2>
+      <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-6 rounded-2xl mt-8 w-full">
+        <h2 className="text-2xl font-semibold mb-4 text-[#8B5CF6]">What&apos;s Next?</h2>
         <ul className="text-left text-gray-300 space-y-3">
           <li className="flex items-start">
             <span className="text-green-500 mr-2">✓</span>
@@ -114,10 +113,6 @@ export default function EmailConfirmed() {
           </li>
         </ul>
       </div>
-
-  
-
     </div>
   )
 }
-
