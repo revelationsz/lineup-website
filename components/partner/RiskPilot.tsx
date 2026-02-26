@@ -57,9 +57,9 @@ export default function RiskPilot({ className = '' }: RiskPilotProps) {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center bg-[#CAFF00]/20 border border-[#CAFF00]/30 rounded-full px-6 py-3 mb-6">
-            <div className="w-3 h-3 bg-[#CAFF00] rounded-full mr-3 animate-pulse" />
-            <span className="text-[#CAFF00] font-semibold">
+          <div className="inline-flex items-center bg-[#8B5CF6]/20 border border-[#8B5CF6]/30 rounded-full px-6 py-3 mb-6">
+            <div className="w-3 h-3 bg-[#8B5CF6] rounded-full mr-3 animate-pulse" />
+            <span className="text-[#8B5CF6] font-semibold">
               Founding spots limited to 25 Boston venues
             </span>
           </div>
@@ -82,8 +82,8 @@ export default function RiskPilot({ className = '' }: RiskPilotProps) {
               We&apos;re so confident Bar Me will drive revenue to your venue that we&apos;re offering a completely risk-free 30-day pilot program.
             </p>
 
-            <div className="bg-[#CAFF00]/10 border border-[#CAFF00]/30 rounded-2xl p-6 mb-8">
-              <h3 className="text-2xl font-bold text-[#CAFF00] mb-4">
+            <div className="bg-[#8B5CF6]/10 border border-[#8B5CF6]/30 rounded-2xl p-6 mb-8">
+              <h3 className="text-2xl font-bold text-[#8B5CF6] mb-4">
                 Our Guarantee to You
               </h3>
               <p className="text-lg text-gray-300 leading-relaxed">
@@ -98,7 +98,7 @@ export default function RiskPilot({ className = '' }: RiskPilotProps) {
               </button>
 
               <div className="flex items-center text-gray-300">
-                <svg className="w-5 h-5 mr-2 text-[#CAFF00]" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 mr-2 text-[#8B5CF6]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                 </svg>
                 <span>No credit card required</span>
@@ -123,7 +123,7 @@ export default function RiskPilot({ className = '' }: RiskPilotProps) {
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-[#CAFF00]/20 text-[#CAFF00] rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-[#8B5CF6]/20 text-[#8B5CF6] rounded-lg flex items-center justify-center mb-4">
                   {guarantee.icon}
                 </div>
 
@@ -148,17 +148,17 @@ export default function RiskPilot({ className = '' }: RiskPilotProps) {
           className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
         >
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-            <div className="text-3xl font-bold text-[#CAFF00] mb-2">15</div>
+            <div className="text-3xl font-bold text-[#8B5CF6] mb-2">15</div>
             <div className="text-gray-400">Spots Remaining</div>
           </div>
 
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-            <div className="text-3xl font-bold text-[#CAFF00] mb-2">48hrs</div>
+            <div className="text-3xl font-bold text-[#8B5CF6] mb-2">48hrs</div>
             <div className="text-gray-400">Average Setup Time</div>
           </div>
 
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-            <div className="text-3xl font-bold text-[#CAFF00] mb-2">100%</div>
+            <div className="text-3xl font-bold text-[#8B5CF6] mb-2">100%</div>
             <div className="text-gray-400">Success Rate</div>
           </div>
         </motion.div>

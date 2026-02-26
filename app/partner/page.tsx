@@ -49,7 +49,7 @@ export default function PartnerPage() {
   };
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pb-24">
       {/* Hero Section */}
       <HeroSection onCTAClick={scrollToForm} />
 

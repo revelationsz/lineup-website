@@ -26,7 +26,7 @@ export default function EmailConfirmed() {
   };
 
   return (
-    <div className="flex flex-col items-center max-w-2xl mx-auto text-center pt-24 px-6">
+    <div className="flex flex-col items-center max-w-2xl mx-auto text-center pt-24 px-6 pb-24">
       <div className="bg-green-500 rounded-full p-4 mb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export default function EmailConfirmed() {
         </svg>
       </div>
 
-      <h1 className="text-6xl md:text-7xl font-bold text-[#CAFF00]">Email Confirmed!</h1>
+      <h1 className="text-6xl md:text-7xl font-bold text-[#8B5CF6]">Email Confirmed!</h1>
 
       <p className="text-xl mb-6 text-gray-300 mt-4">
         Thank you for signing up for Lineup! Your email has been successfully verified. Please try logging back into the app again!
@@ -97,7 +97,7 @@ export default function EmailConfirmed() {
       </div>
 
       <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-6 rounded-2xl mt-8 w-full">
-        <h2 className="text-2xl font-semibold mb-4 text-[#CAFF00]">What&apos;s Next?</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-[#8B5CF6]">What&apos;s Next?</h2>
         <ul className="text-left text-gray-300 space-y-3">
           <li className="flex items-start">
             <span className="text-green-500 mr-2">✓</span>

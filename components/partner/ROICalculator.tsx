@@ -88,7 +88,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                     type="number"
                     value={avgCheckSize}
                     onChange={(e) => setAvgCheckSize(Number(e.target.value))}
-                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#CAFF00] focus:border-transparent text-lg"
+                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent text-lg"
                     min="0"
                     step="5"
                   />
@@ -106,7 +106,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   type="number"
                   value={coversRedeemed}
                   onChange={(e) => setCoversRedeemed(Number(e.target.value))}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#CAFF00] focus:border-transparent text-lg"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent text-lg"
                   min="0"
                   step="10"
                 />
@@ -127,7 +127,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                   onChange={(e) => setCoversRedeemed(Number(e.target.value))}
                   className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                   style={{
-                    background: `linear-gradient(to right, #CAFF00 0%, #CAFF00 ${(coversRedeemed / 200) * 100}%, #e5e7eb ${(coversRedeemed / 200) * 100}%, #e5e7eb 100%)`
+                    background: `linear-gradient(to right, #8B5CF6 0%, #8B5CF6 ${(coversRedeemed / 200) * 100}%, #e5e7eb ${(coversRedeemed / 200) * 100}%, #e5e7eb 100%)`
                   }}
                 />
                 <div className="flex justify-between text-sm text-gray-500 mt-1">
@@ -153,7 +153,7 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
             <div className="space-y-6">
               <div className="bg-white/10 rounded-xl p-4">
                 <div className="text-sm text-white/80 mb-1">Monthly Additional Revenue</div>
-                <div className="text-3xl font-bold text-[#CAFF00]">
+                <div className="text-3xl font-bold text-[#8B5CF6]">
                   {formatCurrency(results.monthlyRevenue)}
                 </div>
               </div>
@@ -165,23 +165,23 @@ export default function ROICalculator({ className = '' }: ROICalculatorProps) {
                 </div>
               </div>
 
-              <div className="bg-[#CAFF00]/20 rounded-xl p-4 border border-[#CAFF00]/30">
+              <div className="bg-[#8B5CF6]/20 rounded-xl p-4 border border-[#8B5CF6]/30">
                 <div className="text-sm text-white/80 mb-1">Monthly Net Revenue</div>
-                <div className="text-3xl font-bold text-[#CAFF00]">
+                <div className="text-3xl font-bold text-[#8B5CF6]">
                   {formatCurrency(results.netRevenue)}
                 </div>
               </div>
 
               <div className="bg-white/10 rounded-xl p-4">
                 <div className="text-sm text-white/80 mb-1">Return on Investment</div>
-                <div className="text-2xl font-bold text-[#CAFF00]">
+                <div className="text-2xl font-bold text-[#8B5CF6]">
                   {results.roi.toFixed(0)}%
                 </div>
               </div>
 
               <div className="border-t border-white/20 pt-4">
                 <div className="text-sm text-white/80 mb-1">Yearly Net Revenue</div>
-                <div className="text-4xl font-bold text-[#CAFF00]">
+                <div className="text-4xl font-bold text-[#8B5CF6]">
                   {formatCurrency(results.yearlyRevenue)}
                 </div>
               </div>

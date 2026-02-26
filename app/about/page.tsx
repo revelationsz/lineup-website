@@ -3,13 +3,13 @@ import Link from "next/link"
 
 export default function About() {
   return (
-    <div className="max-w-6xl mx-auto space-y-16 pt-24 px-6">
+    <div className="max-w-6xl mx-auto space-y-16 pt-24 px-6 pb-24">
       {/* Header Section */}
       <div className="text-center space-y-6">
-        <h1 className="text-6xl md:text-7xl font-bold text-[#CAFF00]">About Lineup</h1>
+        <h1 className="text-6xl md:text-7xl font-bold text-[#8B5CF6]">About Lineup</h1>
         <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Your ultimate nightlife companion app designed to make your night out easier, more enjoyable, and completely
-          <span className="text-[#CAFF00] font-semibold"> hassle-free</span>.
+          <span className="text-[#8B5CF6] font-semibold"> hassle-free</span>.
         </p>
       </div>
 
@@ -37,7 +37,7 @@ export default function About() {
 
       {/* Key Features */}
       <section className="space-y-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#CAFF00] text-center">Key Features</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#8B5CF6] text-center">Key Features</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
             icon={
@@ -51,7 +51,7 @@ export default function About() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-[#CAFF00]"
+                className="text-[#8B5CF6]"
               >
                 <circle cx="12" cy="12" r="10"></circle>
                 <polyline points="12 6 12 12 16 14"></polyline>
@@ -72,7 +72,7 @@ export default function About() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-[#CAFF00]"
+                className="text-[#8B5CF6]"
               >
                 <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
                 <line x1="8" y1="2" x2="8" y2="18"></line>
@@ -94,7 +94,7 @@ export default function About() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-[#CAFF00]"
+                className="text-[#8B5CF6]"
               >
                 <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
               </svg>
@@ -114,7 +114,7 @@ export default function About() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-[#CAFF00]"
+                className="text-[#8B5CF6]"
               >
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
@@ -134,7 +134,7 @@ export default function About() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-[#CAFF00]"
+                className="text-[#8B5CF6]"
               >
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
@@ -154,7 +154,7 @@ export default function About() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-[#CAFF00]"
+                className="text-[#8B5CF6]"
               >
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
@@ -170,7 +170,7 @@ export default function About() {
 
       {/* Social Nightlife Experience */}
       <section className="space-y-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#CAFF00] text-center">Social Nightlife Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#8B5CF6] text-center">Social Nightlife Experience</h2>
         <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 md:p-12 rounded-3xl">
           <p className="text-lg text-gray-300 mb-8 leading-relaxed">
             Nightlife is better with friends. Lineup&apos;s social features let you connect with your crew and discover new spots together through trusted recommendations and friendly competition.
@@ -178,11 +178,11 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
-              <h3 className="text-xl font-bold text-[#CAFF00]">Connect & Discover</h3>
+              <h3 className="text-xl font-bold text-[#8B5CF6]">Connect & Discover</h3>
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3">
                   <div className="bg-white/10 p-2 rounded-lg mt-1">
-                    <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -192,7 +192,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="bg-white/10 p-2 rounded-lg mt-1">
-                    <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -202,7 +202,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="bg-white/10 p-2 rounded-lg mt-1">
-                    <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -214,11 +214,11 @@ export default function About() {
             </div>
 
             <div className="space-y-6">
-              <h3 className="text-xl font-bold text-[#CAFF00]">Compete & Earn Points</h3>
+              <h3 className="text-xl font-bold text-[#8B5CF6]">Compete & Earn Points</h3>
               <ul className="space-y-4 text-gray-300">
                 <li className="flex items-start gap-3">
                   <div className="bg-white/10 p-2 rounded-lg mt-1">
-                    <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -228,7 +228,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="bg-white/10 p-2 rounded-lg mt-1">
-                    <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -238,7 +238,7 @@ export default function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="bg-white/10 p-2 rounded-lg mt-1">
-                    <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -254,7 +254,7 @@ export default function About() {
 
       {/* How Reviews Work */}
       <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 md:p-12 rounded-card">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#CAFF00] mb-6">How Reviews Work</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-[#8B5CF6] mb-6">How Reviews Work</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
           When you leave a review on a bar, your input directly shapes the bar&apos;s overall rating. Here&apos;s how it
           works:
@@ -262,7 +262,7 @@ export default function About() {
         <ul className="space-y-4 text-gray-300">
           <li className="flex items-start gap-3">
             <div className="bg-white/10 p-2 rounded-lg mt-1">
-              <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -272,7 +272,7 @@ export default function About() {
           </li>
           <li className="flex items-start gap-3">
             <div className="bg-white/10 p-2 rounded-lg mt-1">
-              <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -283,7 +283,7 @@ export default function About() {
           </li>
           <li className="flex items-start gap-3">
             <div className="bg-white/10 p-2 rounded-lg mt-1">
-              <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -294,7 +294,7 @@ export default function About() {
           </li>
           <li className="flex items-start gap-3">
             <div className="bg-white/10 p-2 rounded-lg mt-1">
-              <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
@@ -308,11 +308,11 @@ export default function About() {
       {/* Privacy and Support Grid */}
       <div className="grid md:grid-cols-2 gap-8">
         <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-card hover:scale-105 transition-all duration-300">
-          <h2 className="text-2xl font-bold text-[#CAFF00] mb-6">Privacy and Security</h2>
+          <h2 className="text-2xl font-bold text-[#8B5CF6] mb-6">Privacy and Security</h2>
           <ul className="space-y-4 text-gray-300">
             <li className="flex items-start gap-3">
               <div className="bg-white/10 p-2 rounded-lg mt-1">
-                <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
@@ -323,7 +323,7 @@ export default function About() {
             </li>
             <li className="flex items-start gap-3">
               <div className="bg-white/10 p-2 rounded-lg mt-1">
-                <svg className="w-4 h-4 text-[#CAFF00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#8B5CF6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
@@ -336,7 +336,7 @@ export default function About() {
         </div>
 
         <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-8 rounded-card hover:scale-105 transition-all duration-300">
-          <h2 className="text-2xl font-bold text-[#CAFF00] mb-6">Support and Contact</h2>
+          <h2 className="text-2xl font-bold text-[#8B5CF6] mb-6">Support and Contact</h2>
           <p className="text-gray-300 mb-6 leading-relaxed">
             Encounter an issue or have feedback? Reach out to us directly from the app or through our contact form.
           </p>
@@ -354,7 +354,7 @@ export default function About() {
 
       {/* Final CTA */}
       <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-12 rounded-card text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#CAFF00] mb-6">Get Started Today!</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#8B5CF6] mb-6">Get Started Today!</h2>
         <p className="text-xl text-gray-300 mb-8 leading-relaxed">
           Download Lineup, sign in, and transform how you experience nightlife. We&apos;re excited to have you join our
           growing community!

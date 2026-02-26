@@ -73,7 +73,7 @@ export default function EmailSignup({ className = '' }: EmailSignupProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className="w-full px-4 py-3 bg-black text-white rounded-lg placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#CAFF00] border-0 transition-all"
+              className="w-full px-4 py-3 bg-black text-white rounded-lg placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-[#8B5CF6] border-0 transition-all"
               required
             />
           </div>
@@ -85,7 +85,7 @@ export default function EmailSignup({ className = '' }: EmailSignupProps) {
           >
             {isLoading ? (
               <>
-                <div className="w-4 h-4 border-2 border-[#0A0A0A]/30 border-t-[#0A0A0A] rounded-full animate-spin"></div>
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                 Joining...
               </>
             ) : (

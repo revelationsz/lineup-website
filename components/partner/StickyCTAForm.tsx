@@ -217,7 +217,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                       type="text"
                       value={formData.name}
                       onChange={(e) => handleInputChange('name', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#CAFF00] focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.name ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="John Smith"
@@ -233,7 +233,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                       type="text"
                       value={formData.venue}
                       onChange={(e) => handleInputChange('venue', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#CAFF00] focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.venue ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="The Sinclair"
@@ -249,7 +249,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleInputChange('email', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#CAFF00] focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.email ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="john@venue.com"
@@ -265,7 +265,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleInputChange('phone', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#CAFF00] focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.phone ? 'border-red-300' : 'border-gray-300'
                       }`}
                       placeholder="(617) 555-0123"
@@ -280,7 +280,7 @@ export default function StickyCTAForm({ isVisible }: StickyCTAFormProps) {
                     <select
                       value={formData.bestNight}
                       onChange={(e) => handleInputChange('bestNight', e.target.value)}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#CAFF00] focus:border-transparent ${
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#8B5CF6] focus:border-transparent ${
                         errors.bestNight ? 'border-red-300' : 'border-gray-300'
                       }`}
                     >

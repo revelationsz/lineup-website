@@ -8,7 +8,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        'accent-lime': '#CAFF00',
+        'accent': '#8B5CF6',
+        'accent-hover': '#7C3AED',
         'bg-dark': '#0A0A0A',
         'bg-light': '#FFFFFF',
         'fg-on-dark': '#FFFFFF',
@@ -17,9 +18,9 @@ export default {
         'form-bg': '#E4E4E4',
         'form-input': '#000000',
         neon: {
-          magenta: "#CAFF00",
-          cyan: "#CAFF00",
-          violet: "#CAFF00",
+          magenta: "#8B5CF6",
+          cyan: "#8B5CF6",
+          violet: "#8B5CF6",
         },
       },
       fontFamily: {

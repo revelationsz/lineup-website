@@ -93,7 +93,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
               >
-                <div className="w-16 h-16 bg-[#CAFF00] text-[#0A0A0A] rounded-xl flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-[#8B5CF6] text-white rounded-xl flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
 
@@ -115,7 +115,7 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-[#CAFF00] rounded-3xl p-8 md:p-12 text-[#0A0A0A]"
+          className="bg-[#8B5CF6] rounded-3xl p-8 md:p-12 text-white"
         >
           <h3 className="text-3xl font-bold text-center mb-12">
             Future Promise
@@ -131,15 +131,15 @@ export default function BenefitsSection({ className = '' }: BenefitsSectionProps
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-12 h-12 bg-[#0A0A0A]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="w-6 h-6 bg-[#0A0A0A] rounded-full"></div>
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-6 h-6 bg-white rounded-full"></div>
                 </div>
 
                 <h4 className="text-xl font-bold mb-3">
                   {promise.title}
                 </h4>
 
-                <p className="text-[#0A0A0A]/80 leading-relaxed">
+                <p className="text-white/80 leading-relaxed">
                   {promise.description}
                 </p>
               </motion.div>

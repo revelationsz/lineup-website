@@ -65,7 +65,7 @@ export default function HowItWorksSection({ className = '' }: HowItWorksSectionP
         {/* Steps */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#CAFF00] via-[#CAFF00]/50 to-[#CAFF00] transform -translate-y-1/2 z-0" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#8B5CF6] via-[#8B5CF6]/50 to-[#8B5CF6] transform -translate-y-1/2 z-0" />
 
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-8 relative z-10">
             {steps.map((step, index) => (
@@ -81,13 +81,13 @@ export default function HowItWorksSection({ className = '' }: HowItWorksSectionP
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative">
                   {/* Step Number */}
                   <div className="absolute -top-6 left-8">
-                    <div className="w-12 h-12 bg-[#CAFF00] text-[#0A0A0A] rounded-full flex items-center justify-center font-bold text-lg">
+                    <div className="w-12 h-12 bg-[#8B5CF6] text-white rounded-full flex items-center justify-center font-bold text-lg">
                       {step.number}
                     </div>
                   </div>
 
                   {/* Icon */}
-                  <div className="w-20 h-20 bg-[#CAFF00] text-[#0A0A0A] rounded-2xl flex items-center justify-center mb-6 mt-4">
+                  <div className="w-20 h-20 bg-[#8B5CF6] text-white rounded-2xl flex items-center justify-center mb-6 mt-4">
                     {step.icon}
                   </div>
 
@@ -119,8 +119,8 @@ export default function HowItWorksSection({ className = '' }: HowItWorksSectionP
                 {/* Arrow (Mobile) */}
                 {index < steps.length - 1 && (
                   <div className="lg:hidden flex justify-center mt-8 mb-4">
-                    <div className="w-8 h-8 bg-[#CAFF00] rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-[#0A0A0A]" fill="currentColor" viewBox="0 0 24 24">
+                    <div className="w-8 h-8 bg-[#8B5CF6] rounded-full flex items-center justify-center">
+                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
                       </svg>
                     </div>
@@ -139,27 +139,27 @@ export default function HowItWorksSection({ className = '' }: HowItWorksSectionP
           viewport={{ once: true }}
           className="text-center mt-16"
         >
-          <div className="bg-[#CAFF00] rounded-2xl p-8 text-[#0A0A0A]">
+          <div className="bg-[#8B5CF6] rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Get Started?
             </h3>
-            <p className="text-lg mb-6 text-[#0A0A0A]/80">
+            <p className="text-lg mb-6 text-white/80">
               Join the pilot program and start seeing results within 48 hours
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="flex items-center text-[#0A0A0A]/70">
+              <div className="flex items-center text-white/70">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 Zero setup fees
               </div>
-              <div className="flex items-center text-[#0A0A0A]/70">
+              <div className="flex items-center text-white/70">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
                 30-day performance guarantee
               </div>
-              <div className="flex items-center text-[#0A0A0A]/70">
+              <div className="flex items-center text-white/70">
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>

@@ -15,7 +15,7 @@ export default function HeroSection({
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(202,255,0,0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.15),transparent_50%)]" />
       </div>
 
       <div className="max-w-content mx-auto px-6 lg:px-8 w-full">
@@ -58,8 +58,8 @@ export default function HeroSection({
                 Become a Launch Partner
               </button>
 
-              <div className="flex items-center text-[#CAFF00]">
-                <div className="w-3 h-3 bg-[#CAFF00] rounded-full mr-3 animate-pulse" />
+              <div className="flex items-center text-[#8B5CF6]">
+                <div className="w-3 h-3 bg-[#8B5CF6] rounded-full mr-3 animate-pulse" />
                 <span className="font-medium">Limited to 25 Boston venues</span>
               </div>
             </motion.div>
@@ -73,11 +73,11 @@ export default function HeroSection({
             className="relative"
           >
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#CAFF00]/10 to-[#CAFF00]/5" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#8B5CF6]/10 to-[#8B5CF6]/5" />
               <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-[#CAFF00]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-12 h-12 text-[#CAFF00]" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-24 h-24 bg-[#8B5CF6]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-12 h-12 text-[#8B5CF6]" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                     </svg>
                   </div>
@@ -104,11 +104,11 @@ export default function HeroSection({
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              className="absolute -top-6 -right-6 bg-[#CAFF00] rounded-xl p-4 shadow-xl"
+              className="absolute -top-6 -right-6 bg-[#8B5CF6] rounded-xl p-4 shadow-xl"
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-[#0A0A0A]">$127</div>
-                <div className="text-sm text-[#0A0A0A]/70">Avg. Check Size</div>
+                <div className="text-2xl font-bold text-white">$127</div>
+                <div className="text-sm text-white/70">Avg. Check Size</div>
               </div>
             </motion.div>
           </motion.div>

@@ -39,7 +39,7 @@ export default function RootLayout({
         <footer
           className="py-16 px-8"
           style={{
-            background: 'radial-gradient(ellipse at 20% 50%, #6B5B7A, #3A3A4A, #5A6A3A)',
+            background: 'radial-gradient(ellipse at 20% 50%, #6B5B7A, #3A3A4A, #4A3A5A)',
           }}
         >
           <div className="max-w-content mx-auto text-center space-y-6">

@@ -6,7 +6,50 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* ═══════════════ Section 1 — Hero ═══════════════ */}
-      <section className="section-dark min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24">
+      <section className="section-dark relative overflow-hidden min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24">
+        {/* Moving gradient background — purple flowing through black */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          aria-hidden="true"
+        >
+          <div
+            className="gradient-blob absolute w-[500px] h-[500px] rounded-full opacity-100"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.9), transparent 65%)',
+              filter: 'blur(100px)',
+              top: '10%',
+              left: '5%',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[450px] h-[450px] rounded-full opacity-80"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(71, 1, 235, 0.81), transparent 65%)',
+              filter: 'blur(100px)',
+              top: '60%',
+              right: '10%',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[480px] h-[480px] rounded-full opacity-80"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(71, 16, 199, 0.96), transparent 65%)',
+              filter: 'blur(50px)',
+              bottom: '20%',
+              left: '20%',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[420px] h-[420px] rounded-full opacity-80"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(76, 22, 201, 0.81), transparent 100%)',
+              filter: 'blur(50px)',
+              top: '30%',
+              right: '25%',
+            }}
+          />
+        </div>
+        <div className="relative z-10 flex flex-col items-center">
         <h1 className="display-text text-display-hero text-white mb-6">
           LINEUP
         </h1>
@@ -25,6 +68,7 @@ export default function Home() {
         >
           Download on iOS
         </a>
+        </div>
       </section>
 
       {/* ═══════════════ Section 2 — Marquee Ticker ═══════════════ */}
@@ -37,21 +81,21 @@ export default function Home() {
             {[...Array(2)].map((_, i) => (
               <span key={i} className="flex items-center gap-8 text-sm font-bold tracking-widest text-white/40 uppercase px-8">
                 <span>Live Reviews</span>
-                <span className="text-[#CAFF00]">/</span>
+                <span className="text-[#8B5CF6]">/</span>
                 <span>Crowd Levels</span>
-                <span className="text-[#CAFF00]">/</span>
+                <span className="text-[#8B5CF6]">/</span>
                 <span>Line Length</span>
-                <span className="text-[#CAFF00]">/</span>
+                <span className="text-[#8B5CF6]">/</span>
                 <span>Music Ratings</span>
-                <span className="text-[#CAFF00]">/</span>
+                <span className="text-[#8B5CF6]">/</span>
                 <span>Cover Charge</span>
-                <span className="text-[#CAFF00]">/</span>
+                <span className="text-[#8B5CF6]">/</span>
                 <span>Bar Map</span>
-                <span className="text-[#CAFF00]">/</span>
+                <span className="text-[#8B5CF6]">/</span>
                 <span>Safety Scores</span>
-                <span className="text-[#CAFF00]">/</span>
+                <span className="text-[#8B5CF6]">/</span>
                 <span>Real-Time Data</span>
-                <span className="text-[#CAFF00]">/</span>
+                <span className="text-[#8B5CF6]">/</span>
               </span>
             ))}
           </div>
@@ -70,21 +114,21 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-12">
             <div>
-              <span className="display-text text-6xl text-[#CAFF00]">01</span>
+              <span className="display-text text-6xl text-[#8B5CF6]">01</span>
               <h3 className="text-2xl font-bold text-[#0A0A0A] mt-4 mb-3">Open the App</h3>
               <p className="text-[#0A0A0A]/60 leading-relaxed">
                 Download LineUp and instantly see every bar near you with real-time data on what&apos;s happening right now.
               </p>
             </div>
             <div>
-              <span className="display-text text-6xl text-[#CAFF00]">02</span>
+              <span className="display-text text-6xl text-[#8B5CF6]">02</span>
               <h3 className="text-2xl font-bold text-[#0A0A0A] mt-4 mb-3">Check the Vibe</h3>
               <p className="text-[#0A0A0A]/60 leading-relaxed">
                 Browse crowd-sourced reviews — line length, music type, cover charge, crowd level — all updated in real time by people already there.
               </p>
             </div>
             <div>
-              <span className="display-text text-6xl text-[#CAFF00]">03</span>
+              <span className="display-text text-6xl text-[#8B5CF6]">03</span>
               <h3 className="text-2xl font-bold text-[#0A0A0A] mt-4 mb-3">Head Out</h3>
               <p className="text-[#0A0A0A]/60 leading-relaxed">
                 Pick the perfect spot and go. No more guessing, no more bar-hopping blind. You know exactly what to expect.
@@ -95,8 +139,28 @@ export default function Home() {
       </section>
 
       {/* ═══════════════ Section 4 — Visual Showcase ═══════════════ */}
-      <section className="section-dark py-24 px-6">
-        <div className="max-w-content mx-auto text-center">
+      <section className="section-dark py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div
+            className="gradient-blob absolute w-[400px] h-[400px] rounded-full opacity-60"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.7), transparent 65%)',
+              filter: 'blur(100px)',
+              top: '10%',
+              right: '5%',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[350px] h-[350px] rounded-full opacity-80"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(71, 16, 199, 0.8), transparent 103%)',
+              filter: 'blur(100px)',
+              bottom: '10%',
+              left: '10%',
+            }}
+          />
+        </div>
+        <div className="max-w-content mx-auto text-center relative z-10">
           <h2 className="display-text text-display-sub text-white mb-12">
             SEE WHAT&apos;S HAPPENING<br />RIGHT NOW
           </h2>
@@ -111,8 +175,29 @@ export default function Home() {
       </section>
 
       {/* ═══════════════ Section 5 — Stats ═══════════════ */}
-      <section className="section-dark py-24 px-6 border-t border-white/10">
-        <div className="max-w-content mx-auto">
+      <section className="section-dark py-24 px-6 border-t border-white/10 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div
+            className="gradient-blob absolute w-[450px] h-[450px] rounded-full opacity-50"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.7), transparent 85%)',
+              filter: 'blur(100px)',
+              top: '-20%',
+              left: '50%',
+              transform: 'translateX(-50%)',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[380px] h-[380px] rounded-full opacity-40"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(80, 15, 231, 0.9), transparent 75%)',
+              filter: 'blur(100px)',
+              bottom: '-10%',
+              right: '15%',
+            }}
+          />
+        </div>
+        <div className="max-w-content mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
               <div className="display-text text-5xl md:text-6xl text-white mb-2">500+</div>
@@ -155,7 +240,7 @@ export default function Home() {
       {/* ═══════════════ Section 7 — Lime CTA ═══════════════ */}
       <section className="section-lime py-24 px-6">
         <div className="max-w-content mx-auto text-center">
-          <h2 className="display-text text-display-sub text-[#0A0A0A] mb-8">
+          <h2 className="display-text text-display-sub text-white mb-8">
             READY TO CHANGE<br />HOW YOU GO OUT?
           </h2>
           <a
@@ -170,12 +255,41 @@ export default function Home() {
       </section>
 
       {/* ═══════════════ Section 8 — Feature Details ═══════════════ */}
-      <section className="section-dark py-24 px-6">
-        <div className="max-w-content mx-auto space-y-24">
+      <section className="section-dark py-24 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div
+            className="gradient-blob absolute w-[420px] h-[420px] rounded-full opacity-50"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(71, 1, 235, 0.9), transparent 65%)',
+              filter: 'blur(100px)',
+              top: '20%',
+              left: '-10%',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[400px] h-[400px] rounded-full opacity-45"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.85), transparent 65%)',
+              filter: 'blur(100px)',
+              bottom: '20%',
+              right: '-5%',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[350px] h-[350px] rounded-full opacity-40"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(71, 16, 199, 0.88), transparent 65%)',
+              filter: 'blur(100px)',
+              top: '50%',
+              left: '40%',
+            }}
+          />
+        </div>
+        <div className="max-w-content mx-auto space-y-24 relative z-10">
           {/* Row 1 */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-sm font-bold tracking-widest text-[#CAFF00] uppercase mb-4">Live Bar Reviews</p>
+              <p className="text-sm font-bold tracking-widest text-[#8B5CF6] uppercase mb-4">Live Bar Reviews</p>
               <h3 className="display-text text-3xl md:text-4xl text-white mb-6">
                 KNOW BEFORE YOU GO
               </h3>
@@ -198,7 +312,7 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <p className="text-sm font-bold tracking-widest text-[#CAFF00] uppercase mb-4">Interactive Map</p>
+              <p className="text-sm font-bold tracking-widest text-[#8B5CF6] uppercase mb-4">Interactive Map</p>
               <h3 className="display-text text-3xl md:text-4xl text-white mb-6">
                 FIND YOUR NEXT STOP
               </h3>
@@ -211,7 +325,7 @@ export default function Home() {
           {/* Row 3 */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-sm font-bold tracking-widest text-[#CAFF00] uppercase mb-4">Smart Sorting & Filters</p>
+              <p className="text-sm font-bold tracking-widest text-[#8B5CF6] uppercase mb-4">Smart Sorting & Filters</p>
               <h3 className="display-text text-3xl md:text-4xl text-white mb-6">
                 YOUR NIGHT, YOUR WAY
               </h3>
@@ -230,14 +344,35 @@ export default function Home() {
 
       {/* ═══════════════ Section 9 — Final CTA + Email Signup ═══════════════ */}
       <section className="section-dark py-24 px-6 relative overflow-hidden">
-        {/* Subtle purple glow */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          aria-hidden="true"
-          style={{
-            background: 'radial-gradient(ellipse at 50% 50%, rgba(107, 91, 122, 0.15), transparent 70%)',
-          }}
-        />
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div
+            className="gradient-blob absolute w-[500px] h-[500px] rounded-full opacity-70"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.8), transparent 65%)',
+              filter: 'blur(100px)',
+              top: '10%',
+              left: '20%',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[450px] h-[450px] rounded-full opacity-60"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(71, 1, 235, 0.7), transparent 65%)',
+              filter: 'blur(100px)',
+              bottom: '10%',
+              right: '15%',
+            }}
+          />
+          <div
+            className="gradient-blob absolute w-[400px] h-[400px] rounded-full opacity-50"
+            style={{
+              background: 'radial-gradient(ellipse, rgba(76, 22, 201, 0.75), transparent 65%)',
+              filter: 'blur(100px)',
+              top: '40%',
+              right: '30%',
+            }}
+          />
+        </div>
         <div className="max-w-content mx-auto text-center relative z-10">
           <h2 className="display-text text-display-hero text-white mb-4">
             JOIN THE<br />LINEUP
