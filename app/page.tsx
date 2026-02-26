@@ -200,7 +200,7 @@ export default function Home() {
         <div className="max-w-content mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
             <div>
-              <div className="display-text text-5xl md:text-6xl text-white mb-2">500+</div>
+              <div className="display-text text-5xl md:text-6xl text-white mb-2">176</div>
               <p className="text-white/50 text-lg">Bars Tracked</p>
             </div>
             <div>
@@ -225,13 +225,13 @@ export default function Home() {
               <blockquote className="text-3xl md:text-4xl font-headline font-bold text-[#0A0A0A] leading-tight mb-6">
                 &ldquo;Finally, an app that tells me what&apos;s actually happening before I leave the house.&rdquo;
               </blockquote>
-              <p className="text-[#0A0A0A]/50 font-medium">— Early Beta User, Boston</p>
+              <p className="text-[#0A0A0A]/50 font-medium">— Early Beta User</p>
             </div>
             <div>
               <blockquote className="text-3xl md:text-4xl font-headline font-bold text-[#0A0A0A] leading-tight mb-6">
-                &ldquo;No more showing up to a dead bar. LineUp changed how my friend group goes out.&rdquo;
+                &ldquo;We all need this. We just haven't figured it out yet. This app will blow up, and we will all have an easier, safer, and grander time out and about.&rdquo;
               </blockquote>
-              <p className="text-[#0A0A0A]/50 font-medium">— Waitlist Member</p>
+              <p className="text-[#0A0A0A]/50 font-medium">— App Reviewer</p>
             </div>
           </div>
         </div>
