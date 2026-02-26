@@ -1,4 +1,3 @@
-import AnimatedBlurImage from '../components/AnimatedBlurImage'
 import EmailSignup from '../components/EmailSignup'
 import WaitlistCounter from '../components/WaitlistCounter'
 
@@ -164,11 +163,26 @@ export default function Home() {
           <h2 className="display-text text-display-sub text-white mb-12">
             SEE WHAT&apos;S HAPPENING<br />RIGHT NOW
           </h2>
-          <div className="flex justify-center">
-            <AnimatedBlurImage
-              src="https://i.postimg.cc/05CxBfCX/bar-app-mockup-for-website-copy.png"
-              alt="LineUp App Interface"
-              className="max-w-full md:max-w-3xl rounded-image shadow-2xl"
+          <div className="flex flex-nowrap justify-center items-center gap-2 sm:gap-4 md:gap-6 w-full max-w-5xl mx-auto">
+            <img
+              src="/images/homeScreen.png"
+              alt="LineUp home screen"
+              className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
+            />
+            <img
+              src="/images/listViewScreen.png"
+              alt="LineUp list view"
+              className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
+            />
+            <img
+              src="/images/mapScreen.png"
+              alt="LineUp map view"
+              className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
+            />
+            <img
+              src="/images/barScreen.png"
+              alt="LineUp bar detail screen"
+              className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
             />
           </div>
         </div>
@@ -229,7 +243,7 @@ export default function Home() {
             </div>
             <div>
               <blockquote className="text-3xl md:text-4xl font-headline font-bold text-[#0A0A0A] leading-tight mb-6">
-                &ldquo;We all need this. We just haven't figured it out yet. This app will blow up, and we will all have an easier, safer, and grander time out and about.&rdquo;
+                &ldquo;We all need this. We just haven&apos;t figured it out yet. This app will blow up, and we will all have an easier, safer, and grander time out and about.&rdquo;
               </blockquote>
               <p className="text-[#0A0A0A]/50 font-medium">— App Reviewer</p>
             </div>
@@ -298,18 +312,22 @@ export default function Home() {
               </p>
             </div>
             <div className="flex justify-center">
-              <div className="w-full max-w-md aspect-[4/3] bg-white/5 rounded-image border border-white/10 flex items-center justify-center">
-                <span className="text-white/20 text-sm">App Screenshot</span>
-              </div>
+              <img
+                src="/images/listViewScreen.png"
+                alt="LineUp list view showing live bar reviews"
+                className="w-full max-w-[14rem] rounded-image border border-white/10 shadow-2xl object-cover"
+              />
             </div>
           </div>
 
           {/* Row 2 */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 flex justify-center">
-              <div className="w-full max-w-md aspect-[4/3] bg-white/5 rounded-image border border-white/10 flex items-center justify-center">
-                <span className="text-white/20 text-sm">Map View</span>
-              </div>
+              <img
+                src="/images/mapScreen.png"
+                alt="LineUp interactive map view"
+                className="w-full max-w-[14rem] rounded-image border border-white/10 shadow-2xl object-cover"
+              />
             </div>
             <div className="order-1 md:order-2">
               <p className="text-sm font-bold tracking-widest text-[#8B5CF6] uppercase mb-4">Interactive Map</p>
@@ -322,23 +340,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Row 3 */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-sm font-bold tracking-widest text-[#8B5CF6] uppercase mb-4">Smart Sorting & Filters</p>
-              <h3 className="display-text text-3xl md:text-4xl text-white mb-6">
-                YOUR NIGHT, YOUR WAY
-              </h3>
-              <p className="text-white/60 text-lg leading-relaxed">
-                Sort by distance, line length, music type, or name. Filter by what matters to you and save your favorites for quick access later.
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <div className="w-full max-w-md aspect-[4/3] bg-white/5 rounded-image border border-white/10 flex items-center justify-center">
-                <span className="text-white/20 text-sm">Sort & Filter</span>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

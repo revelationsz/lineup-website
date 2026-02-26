@@ -26,7 +26,7 @@ export default function FAQ() {
       ),
     },
     {
-      question: "How does the app know what's happening at each bar?",
+      question: "How does the app know what&apos;s happening at each bar?",
       answer: (
         <p className="leading-relaxed">
           Our community of users updates each bar&apos;s info live by submitting quick reviews. You help others by
@@ -61,7 +61,7 @@ export default function FAQ() {
       ),
     },
     {
-      question: "Can I find bars based on what I'm looking for?",
+      question: "Can I find bars based on what I&apos;m looking for?",
       answer: (
         <div className="space-y-3">
           <p className="leading-relaxed">Yes! You can filter by:</p>
@@ -131,7 +131,29 @@ export default function FAQ() {
   ]
 
   return (
-    <div className="max-w-4xl mx-auto space-y-8 pt-24 px-6 pb-24">
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Purple blobs background */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="gradient-blob absolute w-[480px] h-[480px] rounded-full opacity-80"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.9), transparent 65%)',
+            filter: 'blur(100px)',
+            top: '5%',
+            left: '10%',
+          }}
+        />
+        <div
+          className="gradient-blob absolute w-[420px] h-[420px] rounded-full opacity-85"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(71, 16, 199, 0.85), transparent 65%)',
+            filter: 'blur(100px)',
+            bottom: '10%',
+            right: '15%',
+          }}
+        />
+      </div>
+    <div className="relative z-10 max-w-4xl mx-auto space-y-8 pt-24 px-6 pb-24">
       {/* Header Section */}
       <div className="text-center space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold text-[#8B5CF6]">Frequently Asked Questions</h1>
@@ -194,6 +216,7 @@ export default function FAQ() {
           Contact Support
         </a>
       </div>
+    </div>
     </div>
   )
 }

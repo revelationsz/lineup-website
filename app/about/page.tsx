@@ -3,7 +3,38 @@ import Link from "next/link"
 
 export default function About() {
   return (
-    <div className="max-w-6xl mx-auto space-y-16 pt-24 px-6 pb-24">
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Purple blobs background */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="gradient-blob absolute w-[500px] h-[500px] rounded-full opacity-80"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.9), transparent 65%)',
+            filter: 'blur(100px)',
+            top: '10%',
+            left: '5%',
+          }}
+        />
+        <div
+          className="gradient-blob absolute w-[450px] h-[450px] rounded-full opacity-85"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(71, 1, 235, 0.85), transparent 65%)',
+            filter: 'blur(100px)',
+            top: '50%',
+            right: '10%',
+          }}
+        />
+        <div
+          className="gradient-blob absolute w-[400px] h-[400px] rounded-full opacity-75"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(71, 16, 199, 0.9), transparent 65%)',
+            filter: 'blur(80px)',
+            bottom: '15%',
+            left: '30%',
+          }}
+        />
+      </div>
+    <div className="relative z-10 max-w-6xl mx-auto space-y-16 pt-24 px-6 pb-24">
       {/* Header Section */}
       <div className="text-center space-y-6">
         <h1 className="text-6xl md:text-7xl font-bold text-[#8B5CF6]">About Lineup</h1>
@@ -23,13 +54,26 @@ export default function About() {
         </p>
 
         <div className="flex justify-center">
-          <div className="bg-white/5 border border-white/10 backdrop-blur-sm p-6 rounded-2xl">
+        <div className="flex flex-nowrap justify-center items-center gap-2 sm:gap-4 md:gap-6 w-full max-w-5xl mx-auto">
             <img
-              src="https://i.postimg.cc/05CxBfCX/bar-app-mockup-for-website-copy.png"
-              alt="Lineup App Interface"
-              width={600}
-              height={300}
-              className="rounded-xl shadow-lg"
+              src="/images/homeScreen.png"
+              alt="LineUp home screen"
+              className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
+            />
+            <img
+              src="/images/listViewScreen.png"
+              alt="LineUp list view"
+              className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
+            />
+            <img
+              src="/images/mapScreen.png"
+              alt="LineUp map view"
+              className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
+            />
+            <img
+              src="/images/barScreen.png"
+              alt="LineUp bar detail screen"
+              className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
             />
           </div>
         </div>
@@ -371,6 +415,7 @@ export default function About() {
           Download Now
         </Link>
       </div>
+    </div>
     </div>
   )
 }

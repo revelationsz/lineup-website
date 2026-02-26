@@ -91,7 +91,7 @@ export default function EmailConfirmed() {
           </a>
 
           <p className="text-gray-400 text-sm">
-            {isMobile ? "Don't have the app yet?" : "Download the Lineup app:"}
+            {isMobile ? "Don&apos;t have the app yet?" : "Download the Lineup app:"}
           </p>
         </div>
       </div>

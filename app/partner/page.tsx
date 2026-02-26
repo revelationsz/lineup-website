@@ -49,7 +49,28 @@ export default function PartnerPage() {
   };
 
   return (
-    <main className="min-h-screen pb-24">
+    <main className="relative overflow-hidden min-h-screen pb-24">
+      {/* Purple blobs background */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="gradient-blob absolute w-[500px] h-[500px] rounded-full opacity-80"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.9), transparent 65%)',
+            filter: 'blur(100px)',
+            top: '15%',
+            left: '10%',
+          }}
+        />
+        <div
+          className="gradient-blob absolute w-[450px] h-[450px] rounded-full opacity-85"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(71, 1, 235, 0.85), transparent 65%)',
+            filter: 'blur(100px)',
+            bottom: '30%',
+            right: '5%',
+          }}
+        />
+      </div>
       {/* Hero Section */}
       <HeroSection onCTAClick={scrollToForm} />
 

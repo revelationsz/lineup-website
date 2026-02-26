@@ -1,6 +1,28 @@
 export default function Privacy() {
   return (
-    <div className="max-w-4xl mx-auto space-y-8 pt-24 px-6 pb-24">
+    <div className="relative overflow-hidden min-h-screen">
+      {/* Purple blobs background */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div
+          className="gradient-blob absolute w-[500px] h-[500px] rounded-full opacity-80"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(138, 92, 246, 0.9), transparent 65%)',
+            filter: 'blur(100px)',
+            top: '10%',
+            right: '5%',
+          }}
+        />
+        <div
+          className="gradient-blob absolute w-[400px] h-[400px] rounded-full opacity-85"
+          style={{
+            background: 'radial-gradient(ellipse, rgba(71, 1, 235, 0.85), transparent 65%)',
+            filter: 'blur(100px)',
+            bottom: '25%',
+            left: '5%',
+          }}
+        />
+      </div>
+    <div className="relative z-10 max-w-4xl mx-auto space-y-8 pt-24 px-6 pb-24">
       {/* Header Section */}
       <div className="text-center space-y-4">
         <h1 className="text-6xl md:text-7xl font-bold text-[#8B5CF6]">Privacy Policy</h1>
@@ -169,6 +191,7 @@ export default function Privacy() {
           Contact Us
         </a>
       </div>
+    </div>
     </div>
   )
 }

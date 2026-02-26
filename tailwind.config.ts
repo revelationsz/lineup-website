@@ -43,7 +43,7 @@ export default {
         'pill': '9999px',
         'card': '16px',
         'input': '8px',
-        'image': '12px',
+        'image': '20px',
       },
       maxWidth: {
         'content': '1280px',
