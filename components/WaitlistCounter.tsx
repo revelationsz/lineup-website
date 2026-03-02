@@ -69,7 +69,7 @@ export default function WaitlistCounter({ className = '' }: WaitlistCounterProps
           </>
         )}
       </div>
-      <p className="text-white/50 text-lg">On the Waitlist</p>
+      <p className="text-white/50 text-lg">Users</p>
     </div>
   );
 }
