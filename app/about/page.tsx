@@ -57,22 +57,22 @@ export default function About() {
         <div className="flex justify-center">
         <div className="flex flex-nowrap justify-center items-center gap-2 sm:gap-4 md:gap-6 w-full max-w-5xl mx-auto">
             <img
-              src="/images/homeScreen.png"
+              src="/images/homeScreen.jpg"
               alt="LineUp home screen"
               className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
             />
             <img
-              src="/images/listViewScreen.png"
+              src="/images/listViewScreen.jpg"
               alt="LineUp list view"
               className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
             />
             <img
-              src="/images/mapScreen.png"
+              src="/images/mapScreen.jpg"
               alt="LineUp map view"
               className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
             />
             <img
-              src="/images/barScreen.png"
+              src="/images/barScreen.jpg"
               alt="LineUp bar detail screen"
               className="flex-1 min-w-0 rounded-image border border-white/10 shadow-2xl object-cover"
             />
