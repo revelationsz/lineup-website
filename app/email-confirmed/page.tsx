@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import StoreBadges from '../../components/StoreBadges';
 
 export default function EmailConfirmed() {
   const [isMobile, setIsMobile] = useState(false);
@@ -19,8 +20,14 @@ export default function EmailConfirmed() {
     window.location.href = 'lineup://signin';
 
     setTimeout(() => {
-      if (confirm('Unable to open the Lineup app. Would you like to download it from the App Store?')) {
-        window.open('https://apps.apple.com/app/id6743187492', '_blank');
+      const isAndroid = navigator.userAgent.toLowerCase().includes('android');
+      const storeName = isAndroid ? 'Google Play Store' : 'App Store';
+      const storeUrl = isAndroid
+        ? 'https://play.google.com/store/apps/details?id=com.swhatmore.barApp&hl=en_US'
+        : 'https://apps.apple.com/app/id6743187492';
+
+      if (confirm(`Unable to open the Lineup app. Would you like to download it from the ${storeName}?`)) {
+        window.open(storeUrl, '_blank');
       }
     }, 2000);
   };
@@ -76,23 +83,11 @@ export default function EmailConfirmed() {
           </button>
         )}
 
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <a
-            href="https://apps.apple.com/app/id6743187492"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-105 transition-transform"
-          >
-            <img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-              alt="Download on the App Store"
-              className="h-14"
-            />
-          </a>
-
+        <div className="flex flex-col items-center gap-3 mt-2">
           <p className="text-gray-400 text-sm">
-            {isMobile ? "Don&apos;t have the app yet?" : "Download the Lineup app:"}
+            {isMobile ? "Don't have the app yet?" : "Download the Lineup app"}
           </p>
+          <StoreBadges />
         </div>
       </div>
 

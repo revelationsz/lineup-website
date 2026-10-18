@@ -1,4 +1,5 @@
 import EmailSignup from '../components/EmailSignup'
+import StoreBadges from '../components/StoreBadges'
 import WaitlistCounter from '../components/WaitlistCounter'
 
 export default function Home() {
@@ -59,14 +60,7 @@ export default function Home() {
           Real-time, crowd-sourced bar reviews so you always pick the best spot.
           See line length, music, crowd levels, cover charge, and more — all in one app.
         </p>
-        <a
-          href="https://apps.apple.com/app/id6743187492"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-lime text-lg"
-        >
-          Download on iOS
-        </a>
+        <StoreBadges />
         </div>
       </section>
 
@@ -257,14 +251,7 @@ export default function Home() {
           <h2 className="display-text text-display-sub text-white mb-8">
             READY TO CHANGE<br />HOW YOU GO OUT?
           </h2>
-          <a
-            href="https://apps.apple.com/app/id6743187492"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-dark text-lg"
-          >
-            Download LineUp
-          </a>
+          <StoreBadges variant="dark" />
         </div>
       </section>
 

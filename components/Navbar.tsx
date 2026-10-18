@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import StoreBadges from "./StoreBadges"
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -42,14 +43,7 @@ export default function Navbar() {
           <Link href="/contact" className="text-white/80 hover:text-white transition-colors text-sm">
             Contact
           </Link>
-          <a
-            href="https://apps.apple.com/app/id6743187492"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-lime text-sm !py-2 !px-5"
-          >
-            Download App
-          </a>
+          <StoreBadges variant="dark" size="sm" />
         </div>
       </nav>
 
@@ -85,15 +79,12 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="pt-2">
-              <a
-                href="https://apps.apple.com/app/id6743187492"
-                target="_blank"
-                rel="noopener noreferrer"
+              <StoreBadges
+                variant="dark"
+                size="sm"
+                stretch
                 onClick={() => setMenuOpen(false)}
-                className="block btn-lime text-center text-sm"
-              >
-                Download App
-              </a>
+              />
             </li>
           </ul>
         </nav>
