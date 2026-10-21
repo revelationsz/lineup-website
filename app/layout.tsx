@@ -19,6 +19,9 @@ const vt323 = VT323({
 export const metadata: Metadata = {
   title: "LineUp App",
   description: "Know Where the Night is Going",
+  icons: {
+    icon: "/images/LineUpAndroidAppIcon.png",
+  },
 }
 
 export default function RootLayout({
